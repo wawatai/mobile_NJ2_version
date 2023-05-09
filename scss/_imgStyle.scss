@@ -73,22 +73,6 @@ footer .member::before {
     background: url('../images/icon/svg/user.svg') no-repeat center;
     background-size: contain;
 }
-footer .agentHome::before {
-    background: url('../images/icon/svg/agent_home.svg') no-repeat center;
-    background-size: contain;
-}
-footer .agentRule::before {
-    background: url('../images/icon/svg/agent_rule.svg') no-repeat center;
-    background-size: contain;
-}
-footer .agentNormal::before {
-    background: url('../images/icon/svg/agent_normal.svg') no-repeat center;
-    background-size: contain;
-}
-footer .agentPrivacy::before {
-    background: url('../images/icon/svg/agent_privacy.svg') no-repeat center;
-    background-size: contain;
-}
 
 //slotPage
 .slotWrap .all_ic {
@@ -243,10 +227,6 @@ footer .agentPrivacy::before {
     background: url('../images/icon/svg/member_option_lang.svg') no-repeat center;
     background-size: contain;
 }
-.memberWrap .optionBox .agent_ic::before {
-    background: url('../images/icon/svg/member_option_agent.svg') no-repeat center;
-    background-size: contain;
-}
 .memberWrap .optionBox .logout_ic::before {
     background: url('../images/icon/svg/member_option_logout.svg') no-repeat center;
     background-size: contain;
@@ -295,35 +275,10 @@ footer .agentPrivacy::before {
     background: url('../images/vip_cardBG_1.png') no-repeat;
     background-size: contain;
 }
-.vipWrap .medal.vip0 {
-    background: url('../images/levelMedal00.png') no-repeat;
-    background-size: contain;
-}
 .vipWrap .medal {
-    background: url('../images/levelMedal02.png') no-repeat;
+    background: url('../images/medal.png') no-repeat;
     background-size: contain;
 }
-.vipWrap .medal.vip2 {
-    background: url('../images/levelMedal03.png') no-repeat;
-    background-size: contain;
-}
-.vipWrap .medal.vip3 {
-    background: url('../images/levelMedal04.png') no-repeat;
-    background-size: contain;
-}
-.vipWrap .medal.vip4 {
-    background: url('../images/levelMedal05.png') no-repeat;
-    background-size: contain;
-}
-.vipWrap .medal.vip5 {
-    background: url('../images/levelMedal06.png') no-repeat;
-    background-size: contain;
-}
-.vipWrap .medal.vip6 {
-    background: url('../images/levelMedal07.png') no-repeat;
-    background-size: contain;
-}
-
 .vipWrap .detailBtn {
     background: url('../images/vip_detailBtn.png') no-repeat;
     background-size: contain;
@@ -576,56 +531,6 @@ footer .agentPrivacy::before {
     background: url('../images/icon/baido.png') no-repeat;
     background-size: contain;
 }
-.jumpWindow.plsGo2 .img {
-    background: url('../images/register_susBG.png') no-repeat;
-    background-size: contain;
-}
-
-//agent
-.agentWrap .topBanner {
-    background: url('../images/agent_banner.png') no-repeat;
-    background-size: contain;
-}
-.agentWrap .bigTitle .infoImg {
-    background: url('../images/agent_topImg.png') no-repeat;
-    background-size: contain;
-}
-.agentWrap .introBox li:nth-of-type(1) .img {
-    background: url('../images/agent_introImg_1.png') no-repeat center;
-    background-size: contain;
-}
-.agentWrap .introBox li:nth-of-type(2) .img {
-    background: url('../images/agent_introImg_2.png') no-repeat center;
-    background-size: contain;
-}
-.agentWrap .introBox li:nth-of-type(3) .img {
-    background: url('../images/agent_introImg_3.png') no-repeat center;
-    background-size: contain;
-}
-.agentWrap .introBox li:nth-of-type(4) .img {
-    background: url('../images/agent_introImg_4.png') no-repeat center;
-    background-size: contain;
-}
-.agentWrap .floatIC_1 {
-    background: url('../images/agent_floatIC_1.png') no-repeat;
-    background-size: contain;
-}
-.agentWrap .floatIC_2 {
-    background: url('../images/agent_floatIC_2.png') no-repeat;
-    background-size: contain;
-}
-.agentWrap .form_1 {
-    background: url('../images/agent_form_1.png') no-repeat;
-    background-size: contain;
-}
-.agentWrap .form_2 {
-    background: url('../images/agent_form_2.png') no-repeat;
-    background-size: contain;
-}
-.agentWrap .applyBox button {
-    background: url('../images/agent_applyBtn.png') no-repeat;
-    background-size: contain;
-}
 
 //select
 .selectBox .arrow_ic {
@@ -663,12 +568,6 @@ footer .agentPrivacy::before {
 .noData .img {
     background: url('../images/empty.png') no-repeat;
     background-size: contain;
-}
-
-//aside
-aside .inviteFriend {
-    background: url('../images/inviteFriend.gif') no-repeat;
-    background-size: 100%;
 }
 
 
