@@ -1,0 +1,505 @@
+//會員中心
+.memberWrap {
+    @include mainBG_1;
+
+    //玩家資訊
+    .user {
+        width: 100%;
+        height: auto;
+        border-bottom: solid 2px $border_1;
+        padding-top: 8px;
+
+        //上列
+        .info {
+            width: 100%;
+            height: auto;
+            @include innerBG_1;
+            position: relative;
+            padding: 16px;
+
+            .box {
+                width: 100%;
+                height: auto;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                &:last-child {
+                    margin-top: 4vw;
+                    padding: 2px 0;
+                    border-bottom: solid 1px $border_1;
+                }
+
+                .account {
+                    color: $mainColor_3;
+                    font-size: 4vw;
+                    font-weight: bold;
+
+                    span {
+                        display: block;
+                        color: $mainColor_2;
+                        margin-bottom: 5px;
+                    }
+                }
+
+                .infoBtn {
+                    width: 24vw;
+                    height: 7vw;
+                    @include secondBtn;
+                    padding-bottom: 2px;
+                }
+
+                .amount {
+                    color: $mainColor_1;
+                    font-size: 7vw;
+                    font-weight: bold;
+                }
+
+                .depositBtn {
+                    width: 24vw;
+                    height: 7vw;
+                    @include mainBtn;
+                    font-size: 3.4vw;
+                    padding-bottom: 2px;
+                }
+            }
+        }
+
+        //大按鈕區
+        .btnBox {
+            width: 100%;
+            height: auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 8px 16px;
+
+            .left {
+                width: auto;
+                height: auto;
+
+                button {
+                    display: block;
+                    width: 45vw;
+                    height: 18vw;
+                    color: $mainColor_4;
+                    font-size: 5vw;
+                    font-weight: bold;
+                    text-shadow: 2px 3px 0 $mainShadow_2;
+
+                    &:last-child {
+                        margin-top: 3vw;
+                    }
+                }
+            }
+
+            .right {
+                width: auto;
+                height: auto;
+                display: grid;
+                grid-template-columns: repeat(2,1fr);
+                gap: 2vw;
+
+                li {
+                    width: auto;
+                    height: auto;
+                    text-align: center;
+
+                    button {
+                        width: 14vw;
+                        height: 14vw;
+                        @include lightBtn_1;
+                        border-radius: 50%;
+                        position: relative;
+
+                        &::before {
+                            content: "";
+                            position: absolute;
+                            width: 6vw;
+                            height: 6vw;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%,-50%);
+                        }
+                    }
+
+                    p {
+                        color: $mainColor_3;
+                        font-size: 3vw;
+                        font-weight: bold;
+                        margin-top: 5px;
+                    }
+                }
+            }
+        }
+    }
+
+    //選項條
+    .optionBox {
+        width: 100%;
+        height: auto;
+        padding: 16px 16px 0;
+
+        ul {
+            width: 100%;
+            height: auto;
+
+            li {
+                width: 100%;
+                height: 12vw;
+                @include quickBtn;
+                font-size: 4vw;
+                position: relative;
+                padding-left: 14vw;
+                margin-bottom: 10px;
+
+                &:last-child {
+                    margin: 0;
+                }
+    
+                &:active,&.active {
+    
+                    i {
+                        background: $quickBtn_iconBG_active;
+                    }
+                }
+    
+                i {
+                    width: 12vw;
+                    height: 12vw;
+                    position: absolute;
+                    top: -1px;
+                    left: -1px;
+                    background: $quickBtn_iconBG;
+                    border-radius: 50%;
+    
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%,-50%);
+                        width: 6vw;
+                        height: 6vw;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//會員中心內頁滑軸
+.memberList {
+    width: 100%;
+    height: auto;
+    background: $bg_1;
+    padding: 8px 8px 0;
+
+    ul {
+        width: 100%;
+        height: auto;
+        display: flex;
+        border-bottom: solid 2px $border_1;
+
+        li {
+            width: 50%;
+            height: 45px;
+            @include pageStyle_1;
+            margin-right: 5px;
+
+            &:last-child {
+                font-size: 3vw;
+                margin: 0;
+            }
+        }
+    }
+}
+
+//會員中心內頁基本情報
+.memberInfo {
+    @include mainBG_1;
+
+    //上輸入列
+    form {
+        width: 100%;
+        height: auto;
+        border-bottom: solid 2px $border_1;
+
+        ul {
+            width: 100%;
+            height: auto;
+            padding: 0 16px;
+
+            li {
+                width: 100%;
+                height: auto;
+
+                &:last-child {
+                    margin-bottom: 16px;
+                }
+
+                p {
+                    color: $mainColor_2;
+                    font-size: 4vw;
+                    font-weight: bold;
+                    margin: 10px 0 5px;
+
+                    em {
+                        color: $mainColor_1;
+                    }
+                }
+
+                .inputBox {
+                    width: 100%;
+                    height: auto;
+                    position: relative;
+
+                    input {
+                        width: 100%;
+                        height: 9.87vw;
+                        @include mainInput;
+                    }
+
+                    i {
+                        width: 4vw;
+                        height: 4vw;
+                        position: absolute;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        right: 16px;
+                        display: none;
+
+                        &.display {
+                            display: block;
+                        }
+
+                        &.date_ic {
+                            pointer-events: none;
+                        }
+
+                        &.check_ic {
+                            right: 50px;
+                        }
+                    }
+                }
+            }
+
+            button {
+                width: 80%;
+                height: 11vw;
+                @include secondBtn;
+                display: block;
+                margin: 16px auto;
+            }
+        }
+    }
+
+    //招待碼區/帳號強度
+    .info_1 {
+        width: 100%;
+        height: auto;
+        border-bottom: solid 2px $border_1;
+
+        ul {
+            width: 100%;
+            height: auto;
+            padding: 0 16px;
+            
+            li {
+                width: 100%;
+                height: auto;
+
+                p {
+                    color: $mainColor_2;
+                    font-size: 4vw;
+                    font-weight: bold;
+                    margin: 10px 0 5px;
+                }
+
+                .inputBox {
+                    width: 100%;
+                    height: auto;
+                    position: relative;
+
+                    input {
+                        width: 100%;
+                        height: 9.87vw;
+                        @include mainInput;
+                    }
+                }
+
+                i {
+                    width: 4vw;
+                    height: 4vw;
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    right: 16px;
+                }
+
+                .qr {
+                    width: 60vw;
+                    height: 60vw;
+                    margin: 24px 0;
+                }
+            }
+        }
+    }
+
+    .info_2 {
+        width: 100%;
+        height: auto;
+        padding: 16px 16px 0;
+        border-bottom: solid 2px $border_1;
+
+        ul {
+            width: 100%;
+            height: auto;
+
+            li {
+                width: 100%;
+                height: 9.87vw;
+                background: $memberInfo_info2_BG;
+                border-radius: 3px;
+                box-shadow: 0 2px 3px 0 $mainShadow_1;
+                display: flex;
+                align-items: center;
+                padding-left: 16px;
+                margin-bottom: 16px;
+
+                &.sercurity {
+                    background: $memberInfo_SercurityBG;
+                    box-shadow: none;
+
+                    p {
+                        color: $memberInfo_SercurityColor;
+                        
+                        .low {
+                            color: $memberInfo_Sercurity_low;
+                        }
+                        .middle {
+                            color: $memberInfo_Sercurity_middle;
+                        }
+                        .high {
+                            color: $memberInfo_Sercurity_high;
+                        }
+                    }
+                }
+
+                i {
+                    width: 4vw;
+                    height: 4vw;
+                    margin-right: 16px;
+                }
+
+                p {
+                    color: $mainColor_3;
+                    font-size: 3.4vw;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+
+    //更變密碼
+    .pwdBox {
+        width: 100%;
+        height: auto;
+        padding: 16px;
+
+        .inputBox {
+            width: 100%;
+            height: 9.87vw;
+            background: $memberInfo_info2_BG;
+            box-shadow: 0 2px 3px 0 $mainShadow_1;
+            border-radius: 3px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            padding-left: 16px;
+
+            p {
+                color: $mainColor_3;
+                font-size: 3.4vw;
+                font-weight: bold;
+
+                span {
+                    margin-left: 10px;
+                }
+            }
+
+            i {
+                width: 4vw;
+                height: 4vw;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                right: 16px;
+            }
+        }
+    }
+}
+
+//會員中心平台帳戶資訊
+.memberPlatform {
+    @include mainBG_1;
+    padding: 8px 24px 20vw;
+
+    .box {
+        width: 100%;
+        height: auto;
+        margin-bottom: 10px;
+
+        .title {
+            width: 100%;
+            height: 9vw;
+            background: $table_TitleBG;
+            border-radius: 16px 16px 0 0;
+            color: $table_Title;
+            font-size: 4vw;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 16px;
+        }
+
+        ul {
+            width: 100%;
+            height: auto;
+            background: $table_BG;
+            border: solid 1px $table_Border;
+            border-top: none;
+            padding: 0 8px;
+
+            li {
+                width: 100%;
+                height: 9vw;
+                border-bottom: solid 1px $table_innerBorder;
+                color: $mainColor_3;
+                font-size: 3.7vw;
+                font-weight: bold;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 8px 0;
+
+                &:last-child {
+                    border: none;
+                }
+
+                p {
+                    color: $mainColor_1;
+                    display: flex;
+                    align-items: center;
+
+                    i {
+                        width: 4vw;
+                        height: 4vw;
+                        margin-left: 10px;
+                    }
+                }
+            }
+        }
+    }
+}

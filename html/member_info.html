@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../js/javascript.js"></script>
+    <link rel="shortcut icon" href="../images/NJLOGO_64x64.ico" type="image/x-icon">
+</head>
+<body>
+    <!--header-->
+    <header>
+        <!--content-->
+        <div class="content">
+            <button class="back_arrow" onclick="window.location.href='./member.html'">
+                <i class="arrow_ic"></i>
+                戻る
+            </button>
+            <div class="title">個人情報</div>
+        </div>
+    </header>
+    <!--main-->
+    <main>
+        <!--會員中心內頁滑軸-->
+        <div class="memberList">
+            <ul>
+                <li class="active">基本情報</li>
+                <li onclick="window.location.href='./member_platform.html'">プロバイダーのパスワード</li>
+            </ul>
+        </div>
+        <!--會員中心內頁基本情報-->
+        <div class="memberInfo">
+            <!--上輸入列-->
+            <form>
+                <ul class="inputList">
+                    <li>
+                        <p class="smallTitle">
+                            <em>※</em>
+                            お名前
+                        </p>
+                        <div class="inputBox">
+                            <input type="text" placeholder="実名を入力してください。カード所有者の名前は同じである必要があります。" value="美術一" disabled>
+                        </div>
+                    </li>
+                    <li>
+                        <p class="smallTitle">
+                            <em>※</em>
+                            誕生日
+                        </p>
+                        <div class="inputBox">
+                            <input type="date" value="1999-07-19">
+                            <i class="date_ic display"></i>
+                        </div>
+                    </li>
+                    <li>
+                        <p class="smallTitle">
+                            <em>※</em>
+                            連絡先番号
+                        </p>
+                        <div class="inputBox">
+                            <input type="text" placeholder="携帯番号を入力してください" value="0988808808">
+                            <i class="edit_ic changePhone"></i>
+                        </div>
+                    </li>
+                    <li>
+                        <p class="smallTitle">
+                            <em>※</em>
+                            メールアドレス
+                        </p>
+                        <div class="inputBox">
+                            <input type="text" placeholder="Eメールを入力してください" value="opp1211@gmail.com">
+                            <i class="edit_ic"></i>
+                            <i class="check_ic"></i>
+                            <i class="nocheck_ic"></i>
+                        </div>
+                    </li>
+                    <li>
+                        <p class="smallTitle">Line ID</p>
+                        <div class="inputBox">
+                            <input type="text">
+                            <i class="edit_ic"></i>
+                            <i class="check_ic"></i>
+                            <i class="nocheck_ic"></i>
+                        </div>
+                    </li>
+                    <li>
+                        <p class="smallTitle">Skype ID</p>
+                        <div class="inputBox">
+                            <input type="text">
+                            <i class="edit_ic"></i>
+                            <i class="check_ic"></i>
+                            <i class="nocheck_ic"></i>
+                        </div>
+                    </li>
+                    <button class="checkBtn" type="button">確認</button>
+                </ul>
+            </form>
+            <!--招待碼區-->
+            <div class="info_1">
+                <ul>
+                    <li>
+                        <p>アカウントID</p>
+                        <div class="inputBox">
+                            <input type="text" value="opp121" disabled>
+                        </div>
+                    </li>
+                    <li>
+                        <p>招待コード</p>
+                        <div class="inputBox">
+                            <input type="text" value="MDF789" disabled>
+                            <i class="copy_ic"></i>
+                        </div>
+                    </li>
+                    <li>
+                        <p>プロモーションURL</p>
+                        <div class="inputBox">
+                            <input type="text" value="https://www.fortuna888.net/register?code=" disabled>
+                            <i class="copy_ic"></i>
+                        </div>
+                    </li>
+                    <li class="forQR">
+                        <p>
+                            プロモーションURL QRCode
+                            <br>
+                            (ダウンロードを画像クリックします)
+                        </p>
+                        <div class="qr"></div>
+                    </li>
+                </ul> 
+            </div>
+            <!--帳號強度-->
+            <div class="info_2">
+                <ul>
+                    <li class="sercurity">
+                        <p>
+                            アカウントのセキュリティレベル: 
+                            <span class="middle">中</span>
+                        </p>
+                    </li>
+                    <li>
+                        <i class="check_ic"></i>
+                        <p>基本情報を入力してください</p>
+                    </li>
+                    <li>
+                        <i class="check_ic"></i>
+                        <p>携帯電話番号を連携してください</p>
+                    </li>
+                    <li>
+                        <i class="nocheck_ic"></i>
+                        <p>口座追加</p>
+                    </li>
+                    <li>
+                        <i class="check_ic"></i>
+                        <p> Eメールを入力してください</p>
+                    </li>
+                </ul>
+            </div>
+            <!--更變密碼-->
+            <div class="pwdBox">
+                <div class="inputBox">
+                    <p>
+                        バスワード変更
+                        <span>*******</span>
+                    </p>
+                    <i class="edit_ic"></i>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!--footer-->
+    <footer class="user">
+        <ul>
+            <li>
+                <a class="home" href="./index_inner.html"></a>
+            </li>
+            <li>
+                <a class="promotion" href="./event.html"></a>
+            </li>
+            <li>
+                <a class="wallet" href="./wallet.html"></a>
+            </li>
+            <li>
+                <a class="cs" href="./help_often_contact.html"></a>
+            </li>
+            <li class="active">
+                <a class="member" href="./member.html"></a>
+            </li>
+        </ul>
+    </footer>
+    <!--彈窗-->
+    <div class="filter">
+        <!--更變手機-->
+        <div class="jumpWindow phoneWindow">
+            <div class="title">
+                <p>携帯電話番号を連携してください</p>
+                <i class="close"></i>
+            </div>
+            <p class="smallTitle">
+                <span>元の番号 : </span>
+                0987654325
+            </p>
+            <form>
+                <label>
+                    <input type="text" placeholder="新しい電話番号を入力してください">
+                    <p class="remind">電話番号は11桁である必要があります</p>
+                </label>
+                <label>
+                    <button type="button" class="cellphoneCheck">認証コードを取得する</button>
+                </label>
+                <label>
+                    <input type="text" placeholder="認証コード">
+                </label>
+                <button type="button" class="checkBtn close">確認</button>
+            </form>
+        </div>
+        <!--更變密碼-->
+        <div class="jumpWindow passwordWindow">
+            <div class="title">
+                <p>バスワード変更</p>
+                <i class="close"></i>
+            </div>
+            <div class="content">
+                <form>
+                    <div class="inputBox">
+                        <input type="text" placeholder="旧パスワード">
+                        <i class="eye"></i>
+                    </div>
+                    <div class="inputBox">
+                        <input type="text" placeholder="新しいパスワード">
+                        <i class="eye"></i>
+                    </div>
+                    <div class="inputBox">
+                        <input type="text" placeholder="パスワードを確認" value="aa1234">
+                        <i class="eye active"></i>
+                    </div>
+                    <button type="button" class="close">確認</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

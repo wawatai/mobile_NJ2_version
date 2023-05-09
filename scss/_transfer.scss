@@ -1,0 +1,277 @@
+//轉帳
+.transWrap {
+    @include mainBG_1;
+
+    //上半
+    .walletBox {
+        width: 100%;
+        height: auto;
+        padding-top: 8px;
+        margin-bottom: 16px;
+
+        .content {
+            width: 100%;
+            height: auto;
+            @include innerBG_1;
+            padding: 16px;
+
+            .title {
+                width: 100%;
+                height: auto;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin-bottom: 2vw;
+
+                p {
+                    color: $mainColor_2;
+                    font-size: 4vw;
+                    font-weight: bold;
+                    display: flex;
+                    align-items: center;
+
+                    i {
+                        width: 5vw;
+                        height: 4vw;
+                        margin-left: 5px;
+                    }
+                }
+
+                button {
+                    width: auto;
+                    height: 6vw;
+                    @include mainBtn;
+                    font-size: 3.4vw;
+                    padding: 0 3vw;
+                }
+            }
+
+            .amount {
+                width: 100%;
+                height: auto;
+                padding: 2px 0;
+                border-bottom: solid 1px $border_1;
+
+                p {
+                    color: $mainColor_1;
+                    font-size: 6vw;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+
+    .lineTitle {
+        width: 100%;
+        height: auto;
+        display: flex;
+        align-items: center;
+        margin-bottom: 16px;
+
+        .star_ic {
+            width: 4vw;
+            height: 4vw;
+            flex-shrink: 0;
+            margin-right: 5px;
+        }
+
+        p {
+            color: $mainColor_1;
+            font-size: 4vw;
+            font-weight: bold;
+            flex-shrink: 0;
+            margin-right: 5px;
+        }
+
+        .line {
+            width: 100%;
+            height: 2px;
+            background: $border_1;
+        }
+    }
+
+    .transBox {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .row {
+            width: auto;
+            height: auto;
+            display: flex;
+            align-items: center;
+            margin-bottom: 12px;
+
+            &.sp {
+                padding-left: 42px;
+            }
+
+            p {
+                width: 8vw;
+                color: $mainColor_2;
+                font-size: 4vw;
+                font-weight: bold;
+                text-align: right;
+                margin-right: 16px;
+            }
+
+            .selectBox {
+                width: auto;
+                height: auto;
+                position: relative;
+
+                select {
+                    width: 70vw;
+                    height: 9.87vw;
+                    @include mainSelect;
+                }
+
+                .arrow_ic {
+                    width: 18px;
+                    height: 9px;
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    right: 16px;
+                }
+            }
+
+            .bigarrow_ic {
+                width: 6vw;
+                height: 7vw;
+                margin: 0 10px;
+            }
+        }
+
+        .inputBox {
+            width: auto;
+            height: auto;
+            padding-left: calc(5vw + 16px);
+            position: relative;
+            margin-top: 20px;
+
+            input {
+                width: 67vw;
+                height: 9.87vw;
+                @include mainInput;
+                text-align: right;
+                padding: 1px 16px 1px 2px;
+            }
+
+            p {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                left: calc(5vw + 32px);
+                color: $mainColor_2;
+                font-size: 4vw;
+                font-weight: bold;
+            }
+        }
+
+        button {
+            width: 70%;
+            height: 11vw;
+            @include secondBtn;
+            display: block;
+            margin: 24px auto;
+        }
+    }
+
+    //錢包列
+    .walletList { 
+        width: 100%;
+        height: auto;
+
+        button {
+            width: 42vw;
+            height: 9.87vw;
+            @include mainBtn;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 16px;
+
+            &.display {
+                display: flex;
+            }
+
+            i {
+                width: 4vw;
+                height: 4vw;
+                margin-left: 5px;
+                filter: grayscale(1) brightness(15);
+                transform: rotate(90deg);
+            }
+        }
+
+        .forPlatform {
+            width: 100%;
+            height: 0;
+            overflow: hidden;
+            padding: 0 16px;
+
+            &.active {
+                height: auto;
+            }
+
+            .title {
+                width: 100%;
+                height: auto;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin-bottom: 16px;
+
+                p {
+                    color: $disable;
+                    font-size: 3.4vw;
+                    font-weight: bold;
+                }
+            }
+
+            ul {
+                width: 100%;
+                height: auto;
+                display: grid;
+                grid-template-columns: repeat(2,1fr);
+                gap: 8px 10px;
+
+                li {
+                    width: auto;
+                    height: auto;
+                    border-radius: 10px;
+                    background: $bg_2;
+                    box-shadow: 1px 1px 2px 0 $mainShadow_1;
+                    padding: 10px 16px;
+
+                    div {
+                        width: 100%;
+                        color: $mainColor_2;
+                        font-size: 3.4vw;
+                        font-weight: bold;
+                        letter-spacing: 1px;
+                        @include hiddenText;
+                    }
+
+                    p {
+                        color: $mainColor_1;
+                        font-size: 5vw;
+                        font-weight: bold;
+                        margin-top: 10px;
+                    }
+                }
+            }
+
+            .closeBtn {
+                margin-top: 16px;
+
+                i {
+                    transform: rotate(-90deg);
+                }
+            }
+        }
+    }
+}

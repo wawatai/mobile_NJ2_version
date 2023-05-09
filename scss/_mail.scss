@@ -1,0 +1,429 @@
+//站內信上選項
+.topList {
+    width: 100%;
+    height: auto;
+    padding: 8px 8px 0;
+    background: $bg_1;
+
+    ul {
+        width: 100%;
+        height: auto;
+        display: flex;
+        border-bottom: solid 2px $border_1;
+
+        li {
+            width: 50%;
+            height: 45px;
+            @include pageStyle_1;
+            margin-right: 5px;
+
+            &:last-child {
+                margin: 0;
+            }
+        }
+    }
+}
+
+//內容
+.mailWrap {
+    @include mainBG_1;
+    overflow: hidden;
+
+    .lineTitle {
+        width: 100%;
+        height: auto;
+        display: none;
+        align-items: center;
+        margin-bottom: 16px;
+
+        &.display {
+            display: flex;
+        }
+
+        .star_ic {
+            width: 4vw;
+            height: 4vw;
+            flex-shrink: 0;
+            margin-right: 5px;
+        }
+
+        p {
+            color: $mainColor_1;
+            font-size: 4vw;
+            font-weight: bold;
+            flex-shrink: 0;
+            margin-right: 5px;
+        }
+
+        .line {
+            width: 100%;
+            height: 2px;
+            background: $border_1;
+        }
+    }
+
+    &.normal {
+
+        //中選項
+        .subClass {
+            width: 100%;
+            height: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 16px 0;
+
+            li {
+                width: auto;
+                height: 9.87vw;
+                @include mainBtn;
+                display: none;
+                align-items: center;
+                justify-content: center;
+                padding: 0 10px;
+
+                &.display {
+                    display: flex;
+                }
+
+                i {
+                    width: 4vw;
+                    height: 4vw;
+                    transform: rotate(-90deg);
+                    filter: grayscale(1) brightness(15);
+                    margin-left: 10px;
+                }
+            }
+        }
+
+        //編輯
+        .editBox {
+            width: 100%;
+            height: auto;
+            padding: 0 16px 16px;
+            justify-content: space-between;
+            display: none;
+
+            &.display {
+                display: flex;
+            }
+
+            .all {
+                width: auto;
+                height: auto;
+                color: $mainColor_3;
+                font-size: 4vw;
+                font-weight: bold;
+                display: flex;
+                align-items: center;
+
+                input {
+                    margin-right: 10px;
+                    @include checkBox;
+                }
+            }
+
+            .modify {
+                width: auto;
+                height: auto;
+                display: flex;
+
+                button {
+                    width: 18vw;
+                    height: 8vw;
+                    @include lightBtn_1;
+
+                    &.read {
+                        border-color: $lightBtn_secondColor;
+                        color: $lightBtn_secondColor;
+                        margin-right: 5px;
+
+                        &:active,&.active {
+                            background: $lightBtn_secondColor;
+                            color: $mainColor_4;
+                        }
+                    }
+                }
+            }
+        }
+
+        //內容
+        .mailBox {
+            width: 100%;
+            height: calc(100vh - 205px);
+            padding-bottom: 20vw;
+            overflow-y: auto;
+
+            &.editing {
+                height: calc(100vh - 255px);
+
+                ul {
+
+                    li {
+
+                        input {
+                            display: block;
+                        }
+
+                        .right {
+
+                            .textBox {
+
+                                p {
+                                    width: 45vw;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            
+            &.system,&.personal {
+                display: none;
+
+                &.display {
+                    display: block;
+                }
+            }
+
+            ul {
+                width: 100%;
+                height: auto;
+                padding: 0 16px;
+
+                li {
+                    width: 100%;
+                    height: auto;
+                    @include innerBG_2;
+                    display: flex;
+                    align-items: center;
+                    padding: 16px;
+                    margin-bottom: 10px;
+
+                    &.read {
+                        background: $mail_readBG;
+                        box-shadow: none;
+
+                        .right {
+
+                            .title {
+                                color: $disable;
+                            }
+                        }
+                    }
+
+                    input {
+                        width: 10px;
+                        height: 10px;
+                        @include checkBox;
+                        display: none;
+                        margin-right: 16px;
+                        flex-shrink: 0;
+                    }
+
+                    .right {
+                        width: 100%;
+                        height: auto;
+                        display: flex;
+                        align-items: center;
+
+                        .title {
+                            color: $mainColor_2;
+                            font-size: 4vw;
+                            font-weight: bold;
+                            margin-right: 16px;
+                            flex-shrink: 0;
+                        }
+    
+                        .textBox {
+                            width: 100%;
+                            height: auto;
+    
+                            p {
+                                width: 52vw;
+                                color: $mainColor_3;
+                                font-size: 3.4vw;
+                                font-weight: bold;
+                                @include hiddenText;
+
+                                &.date {
+                                    color: $disable;
+                                    margin-bottom: 5px;
+                                }
+                            }
+                        }
+                    }
+
+                    .arrow_ic {
+                        width: 7vw;
+                        height: 7vw;
+                        position: relative;
+
+                        &::before {
+                            content: "";
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%,-50%) rotate(-90deg);
+                            width: 16px;
+                            height: 9px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &.post {
+
+        //中選項
+        .subClass {
+            width: 100%;
+            height: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 16px 0;
+
+            li {
+                width: auto;
+                height: 9.87vw;
+                @include mainBtn;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 0 20px;
+
+                &:first-child {
+                    margin-right: 10px;
+                    
+                    i {
+                        transform: rotate(90deg);
+                        margin: 0 10px 0 0;
+                    }
+                }
+
+                i {
+                    width: 4vw;
+                    height: 4vw;
+                    transform: rotate(-90deg);
+                    filter: grayscale(1) brightness(15);
+                    margin-left: 10px;
+                }
+            }
+        }
+
+        //內容
+        .mailBox {
+            width: 100%;
+            height: calc(100vh - 175px);
+            overflow-y: auto;
+            padding-bottom: 20vw;
+
+            &.hot,&.nor,&.dep {
+                display: none;
+
+                &.display {
+                    display: block;
+                }
+            }
+
+            ul {
+                width: 100%;
+                height: auto;
+                padding: 0 16px;
+
+                li {
+                    width: 100%;
+                    height: 15vw;
+                    @include innerBG_2;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    position: relative;
+                    padding: 0 16px 0 21px;
+                    overflow: visible;
+                    margin-bottom: 10px;
+
+                    &::before {
+                        border-radius: 30px 0 0 30px;   
+                    }
+
+                    p {
+                        width: 46vw;
+                        height: auto;
+                        color: $mainColor_2;
+                        font-size: 4vw;
+                        font-weight: bold;
+                        @include hiddenText;
+
+                        &.date {
+                            width: auto;
+                            color: $disable;
+                            font-weight: bold;
+                            position: absolute;
+                            right: 40px;
+                        }
+                    }
+
+                    i {
+                        width: 16px;
+                        height: 9px;
+                        transform: rotate(-90deg);
+                    }
+                }
+            }
+        }
+    }
+}
+
+//內文
+.mailContent {
+    @include mainBG_1;
+    padding: 16px 24px;
+
+    .box {
+        width: 100%;
+        height: auto;
+
+        .title {
+            width: 100%;
+            height: 9vw;
+            background: $table_TitleBG;
+            border-radius: 5px 5px 0 0;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            padding: 0 16px;
+
+            p {
+                color: $mainColor_4;
+                font-size: 3.4vw;
+                font-weight: bold;
+            }
+        }
+
+        .content {
+            width: 100%;
+            height: calc(100vh - 185px);
+            background: $bg_2;
+            border-radius: 0 0 5px 5px;
+            border: solid 1px $table_Border;
+            border-top: none;
+            overflow-y: auto;
+            padding: 16px;
+
+            p {
+                color: $mainColor_3;
+                font-size: 4vw;
+                font-weight: bold;
+                line-height: 5.5vw;
+                margin-bottom: 10px;
+
+                &:last-child {
+                    margin: 0;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,24 @@
+<svg id="群組_68" data-name="群組 68" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="108.969" height="108.969" viewBox="0 0 108.969 108.969">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #ffffff;
+      }
+
+      .cls-1, .cls-2 {
+        fill-rule: evenodd;
+      }
+
+      .cls-2 {
+        fill: #ffffff;
+      }
+    </style>
+    <filter id="filter" x="873.031" y="750" width="108.969" height="78.5" filterUnits="userSpaceOnUse">
+      <feImage preserveAspectRatio="none" x="873.031" y="750" width="108.969" height="78.5" result="image" xlink:href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMTA4Ljk2OSIgaGVpZ2h0PSI3OC41IiB2aWV3Qm94PSIwIDAgMTA4Ljk2OSA3OC41Ij4KICA8ZGVmcz4KICAgIDxzdHlsZT4KICAgICAgLmNscy0xIHsKICAgICAgICBmaWxsOiB1cmwoI2xpbmVhci1ncmFkaWVudCk7CiAgICAgIH0KICAgIDwvc3R5bGU+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImxpbmVhci1ncmFkaWVudCIgeDE9IjU0LjQ4NSIgeTE9Ijc4LjUiIHgyPSI1NC40ODUiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjOTcwNzA3Ii8+CiAgICAgIDxzdG9wIG9mZnNldD0iMC45ODEiIHN0b3AtY29sb3I9IiNjZjA1MDUiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjY2YwNTA1Ii8+CiAgICA8L2xpbmVhckdyYWRpZW50PgogIDwvZGVmcz4KICA8cmVjdCBjbGFzcz0iY2xzLTEiIHdpZHRoPSIxMDguOTY5IiBoZWlnaHQ9Ijc4LjUiLz4KPC9zdmc+Cg=="/>
+      <feComposite result="composite" operator="in" in2="SourceGraphic"/>
+      <feBlend result="blend" in2="SourceGraphic"/>
+    </filter>
+  </defs>
+  <path id="形狀_3" data-name="形狀 3" class="cls-1" d="M936.356,828.45v-1.515c0-7.4.02-14.8-.009-22.206a8.833,8.833,0,0,0-17.655-.621c-0.115,7.6-.038,15.2-0.044,22.8v1.516c-0.467.032-.844,0.081-1.222,0.081-10.02,0-20.04.025-30.06,0-7.344-.021-12.927-4.633-14.166-11.666a16.48,16.48,0,0,1-.181-2.838q-0.015-24.759,0-49.518c0.007-7.445,4.559-13.019,11.653-14.292a15.439,15.439,0,0,1,2.72-.185q40.1-.015,80.2,0c7.418,0,13,4.625,14.226,11.731a16.02,16.02,0,0,1,.171,2.72q0.015,24.819,0,49.637c-0.009,7.425-4.618,13-11.718,14.24a14.6,14.6,0,0,1-2.483.171q-15.148.016-30.3,0.006C937.174,828.506,936.861,828.476,936.356,828.45Zm37.954-53.191c0-4.226,0-8.332,0-12.438a1.9,1.9,0,0,0-.1-0.461c-0.8-3.048-3.225-4.762-6.783-4.762q-39.921,0-79.843,0c-0.317,0-.634,0-0.95.017a6.159,6.159,0,0,0-5.978,6.043c-0.075,3.68-.024,7.362-0.019,11.043a2.522,2.522,0,0,0,.136.559H974.31Zm-74.7,25.394c2.5,0,4.99.02,7.484-.006a3.8,3.8,0,1,0-.043-7.589q-7.425-.029-14.848,0a3.8,3.8,0,1,0,.043,7.592C894.7,800.667,897.15,800.654,899.605,800.653ZM897.073,813.3c1.661,0,3.322.026,4.982-.006a3.784,3.784,0,1,0,.125-7.566q-5.1-.114-10.2,0a3.783,3.783,0,1,0,.111,7.566C893.751,813.328,895.412,813.3,897.073,813.3Z" transform="translate(-873.031 -750)"/>
+  <path id="形狀_3_拷貝" data-name="形狀 3 拷貝" class="cls-2" d="M931.305,845.984c3.019-3.028,5.779-5.809,8.556-8.573a3.669,3.669,0,0,1,4.04-.929,3.529,3.529,0,0,1,2.472,3.18,3.589,3.589,0,0,1-1.059,3.032c-5.035,5.043-10.06,10.1-15.13,15.1a3.658,3.658,0,0,1-5.419-.048q-7.549-7.484-15.037-15.03a3.767,3.767,0,0,1-.061-5.344,3.811,3.811,0,0,1,5.439.008c2.522,2.459,4.993,4.972,7.489,7.459,0.3,0.3.611,0.575,1.1,1.038V844.4q0-19.592,0-39.183a8.3,8.3,0,0,1,.057-1.421,3.8,3.8,0,0,1,7.535.434c0.027,0.394.012,0.791,0.012,1.187v40.568Z" transform="translate(-873.031 -750)"/>
+</svg>

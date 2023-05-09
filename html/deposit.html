@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../js/javascript.js"></script>
+    <link rel="shortcut icon" href="../images/NJLOGO_64x64.ico" type="image/x-icon">
+</head>
+<body>
+    <!--header-->
+    <header>
+        <!--content-->
+        <div class="content">
+            <button class="back_arrow" onclick="window.location.href='./wallet.html'">
+                <i class="arrow_ic"></i>
+                戻る
+            </button>
+            <div class="title">入金エリア</div>
+        </div>
+    </header>
+    <!--main-->
+    <main>
+        <!--存款-->
+        <div class="depositWrap">
+            <!--跑馬燈-->
+            <div class="marqueeBox">
+                <div class="title">
+                    <p>最新ニュース</p>
+                </div>
+                <div class="marquee">
+                    <pre>プロモーション~スロットリベートボーナス</pre>
+                </div>
+            </div>
+            <div class="lineTitle">
+                <i class="star_ic"></i>
+                <p>決済方法を選択</p>
+                <div class="line"></div>
+            </div>
+            <div class="depList">
+                <ul>
+                    <li>
+                        <i class="vega_ic"></i>
+                    </li>
+                    <li>
+                        <i class="sticpay_ic"></i>
+                    </li>
+                    <li>
+                        <i class="iwallet_ic"></i>
+                    </li>
+                    <li>
+                        <i class="usdt_ic"></i>
+                    </li>
+                    <li>
+                        <i class="tigerpay_ic"></i>
+                    </li>
+                    <li class="active">
+                        <i class="imove_ic"></i>
+                    </li>
+                    <li>
+                        <i class="card_ic"></i>
+                    </li>
+                </ul>
+            </div>
+            <div class="depContent imove display">
+                <p class="smallTitle">チャンネルを選択</p>
+                <div class="selectBox">
+                    <select>
+                        <option value="">Vega Wallet</option>
+                        <option value="">STICPAY</option>
+                        <option value="">iwallet</option>
+                        <option value="">USDT</option>
+                        <option value="">Tigerpay</option>
+                        <option value="" selected>imove</option>
+                        <option value="">銀行振込</option>
+                    </select>
+                    <i class="arrow_ic"></i>
+                </div>
+                <p class="smallTitle">入金額</p>
+                <div class="inputBox">
+                    <input type="text" value="0">
+                </div>
+                <p class="remind">入金額は「JPY ¥1000〜無制限」でなければなりません参照為替レート JPY ¥1 : JPY ¥1</p>
+                <p class="remind">入金可能金額 ¥0.00 (当時の為替レートに基準)</p>
+                <button>今すぐ入金</button>
+            </div>
+            <div class="remindBox">
+                <div class="lineTitle">
+                    <div class="line"></div>
+                    <i class="star_ic"></i>
+                    <p>ご注意</p>
+                    <i class="star_ic"></i>
+                    <div class="line"></div>
+                </div>
+                <p class="text">口座設定を設定してないと該当入金方法はご利用できません， 例えばUSDTをご利用されたい場合、USDTの口座設定を事前に行って頂く必要となります。</p>
+                <p class="text">入金金額は整数である必要があります。例：21（O）、21.5（X）</p>
+                <p class="text">ご入金後、30分以内にメインウォレットに反映致します。万が一30分経過してもメインウォレットに入っていない場合、お手数ではございますが、ライブチャットまでご連絡をお願い致します。</p>
+                <p class="remind">※ 入金ボーナスを申請されたい場合は、ご入金、プレイ前に入金ボーナスをご申請ください。</p>
+                <p class="smallTitle">Vega Walletでの入金</p>
+                <p class="text">毎日00:00AM～01:00AMはVega Wallet側で決算を行います。この時間内の入金額の即時反映はできかねますので、ご了承ください。 30分経ってもメインウォレットに反映されない場合は、お手数ですがライブチャットまでお問い合わせください。</p>
+                <p class="smallTitle">仮想通貨</p>
+                <p class="text">1.仮想通貨での入金(通貨：米ドル)は少し時間が必要ですので、約30分～2時間でメインウォレットに反映致します。 仮想通貨の送付には有効時間がありますので、申請の際にはご注意ください。有効時間が切れてから送付されますと，該当取引が承認されない場合があります。その際は返金まで24～72時間かかることがあり、また、手数料はお客様のご負担となります。</p>
+                <p class="text">2.仮想通貨の送付の際にはQRコードの利用を推奨いたします。アドレスをコピーして使用する場合は、実際に送付する金額が入金予定額と同額であるかを必ずご確認ください。入力に間違いがあり過払いが生じた場合でも、当サイトは一切の返金を行いません。</p>
+                <p class="smallTitle">銀行振込入金</p>
+                <p class="text">銀行振込での入金は24時間ご利用いただけます。</p>
+                <p class="text">※ 祝日、振替休日、年始はご利用いただけない場合がございます。</p>
+                <p class="text">※ チャット営業時間外は反映遅くなります。</p>
+                <p class="text">※ ご利用銀行の営業時間によって、送金できかねる場合がございます。</p>
+                <p class="text">※ 銀行振込手数料はお客様負担となります。</p>
+                <p class="text">※ 銀行振込でのご入金は順次に対応させていただいておりますため、お時間がかかってしまう場合がございます。30分経っても入金額が反映されない場合は、お手数ですがライブチャットへお問い合わせください。</p>
+                <p class="text">※深夜の時間帯は反映にお時間がかかってしまう場合がございます。予めご了承ください。</p>
+                <p class="remind">※【金額確認】に表示された金額をご確認の上、送金をお願いします。</p>
+            </div>
+        </div>
+    </main>
+    <!--footer-->
+    <footer class="wallet">
+        <ul>
+            <li>
+                <a class="home" href="./index_inner.html"></a>
+            </li>
+            <li>
+                <a class="promotion" href="./event.html"></a>
+            </li>
+            <li class="active">
+                <a class="wallet" href="./wallet.html"></a>
+            </li>
+            <li>
+                <a class="cs" href="./help_often_contact.html"></a>
+            </li>
+            <li>
+                <a class="member" href="./member.html"></a>
+            </li>
+        </ul>
+    </footer>
+    <!--彈窗-->
+    <div class="filter display">
+        <!--無信用卡提示-->
+        <div class="jumpWindow plsGo display">
+            <div class="title">
+                ヒント
+                <i class="close"></i>
+            </div>
+            <div class="content">
+                <p>先にログインください</p>
+                <button class="close">確認</button>
+            </div>
+        </div>
+        <!--loading-->
+        <div class="jumpWindow loading">
+            <div class="title">ヒント</div>
+            <div class="content">
+                <div class="img"></div>
+                <p>loading...</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

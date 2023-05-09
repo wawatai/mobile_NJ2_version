@@ -1,0 +1,371 @@
+//跑馬燈
+.marqueeBox {
+    width: 96%;
+    height: 7vw;
+    background: $marquee_BG;
+    border: solid 1px $marquee_Border;
+    box-shadow: 0 2px 5px 0 $mainShadow_1 inset;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    margin: 8px auto;
+    flex-shrink: 0;
+
+    .title {
+        width: auto;
+        height: 100%;
+        background: $marquee_TitleBG;
+        border-radius: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        padding: 0 3vw 2px;
+
+        p {
+            color: $marquee_Title;
+            font-size: 3.4vw;
+            font-weight: bold;
+        }
+    }
+
+    .marquee {
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+
+        pre {
+            display: inline-block;
+            color: $marquee_Word;
+            font-size: 3vw;
+            font-weight: bold;
+            animation: marquee 10s linear 0s infinite;
+            padding-left: 100%;
+        }
+
+        @keyframes marquee {
+            0% {
+                transform: translateX(0%);
+            }
+
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+    }
+}
+
+//快速選單
+.quickBox {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 16px;
+    flex-shrink: 0;
+
+    .btnBox {
+        width: auto;
+        height: auto;
+        flex-shrink: 0;
+
+        button {
+            width: 12vw;
+            height: 12vw;
+            @include lightBtn_1;
+            border-radius: 50%;
+            font-size: 3.7vw;
+            margin: 0 3px;
+        }
+    }
+
+    .nameBox,
+    .walletBox {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        .lv {
+            width: auto;
+            height: 6vw;
+            background: $lv_BG;
+            border-radius: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0 10px;
+
+            p {
+                color: $mainColor_4;
+                font-size: 3vw;
+                font-weight: bold;
+            }
+        }
+
+        .userName {
+            color: $mainColor_1;
+            font-size: 4vw;
+            font-weight: bold;
+            margin-top: 5px;
+        }
+
+        .smallTitle {
+            color: $mainColor_2;
+            font-size: 3vw;
+            font-weight: bold;
+        }
+
+        .amount {
+            color: $mainColor_1;
+            font-size: 5vw;
+            font-weight: bold;
+            margin-top: 8px;
+        }
+    }
+}
+
+//遊戲區
+.homeCenter {
+    width: 96%;
+    height: auto;
+    margin: 0 auto;
+    padding-bottom: 20vw;
+    // height: 100%;
+    // overflow-y: auto;
+
+    .topBox {
+        width: 100%;
+        height: auto;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 8px;
+        margin-bottom: 16px;
+
+        li {
+            width: auto;
+            height: 8vw;
+            @include quickBtn;
+            position: relative;
+
+            &:active,&.active {
+
+                i {
+                    background: $quickBtn_iconBG_active;
+                }
+            }
+
+            &.board {
+                font-size: 3vw;
+            }
+
+            i {
+                width: 8vw;
+                height: 8vw;
+                position: absolute;
+                top: -1px;
+                left: -1px;
+                background: $quickBtn_iconBG;
+                border-radius: 50%;
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%,-50%);
+                    width: 4vw;
+                    height: 4vw;
+                }
+
+                &.soccer_ic,
+                &.slot_ic,
+                &.fish_ic {
+                    
+                    &::before {
+                        width: 5vw;
+                        height: 5vw;
+                    }
+                }
+            }
+        }
+    }
+
+    .downBox {
+        width: 100%;
+        height: auto;
+        grid-template-columns: repeat(2,1fr);
+        gap: 8px;
+        display: none;
+
+        &.display {
+            display: grid;
+        }
+
+        &.hot {
+
+            .gameBox {
+                width: auto;
+                height: auto;
+                background: $slotPage_boxBG;
+                border-radius: 10px;
+                border: solid 1px $slotPage_boxBorder;
+                font-size: 0;
+                overflow: hidden;
+    
+                .title {
+                    width: 100%;
+                    height: 8vw;
+                    display: flex;
+                    justify-content: space-between;
+    
+                    p {
+                        width: 73%;
+                        height: 100%;
+                        display: flex;
+                        align-items: center;
+                        padding-left: 8px;
+                        
+                        span {
+                            width: 100%;
+                            color: $mainColor_3;
+                            font-size: 3.4vw;
+                            font-weight: bold;
+                            @include hiddenText;
+                        }
+                    }
+    
+                    .loveBox {
+                        width: 18%;
+                        height: 100%;
+                        background: $slotPage_box_loveBG;
+                        display: flex;
+                        align-items: center;
+                        position: relative;
+    
+                        &::before {
+                            content: "";
+                            position: absolute;
+                            bottom: 0;
+                            left: -4vw;
+                            width: 0;
+                            height: 0;
+                            border-style: solid;
+                            border-width: 8vw 0 0 4vw;
+                            border-color: $slotPage_box_loveBG transparent;
+                        }
+    
+                        &.active {
+                            background: $slotPage_box_loveBG_active;
+    
+                            &::before {
+                                border-color: $slotPage_box_loveBG_active transparent;
+                            }
+                        }
+    
+                        i {
+                            width: 5vw;
+                            height: 4vw;
+                            margin-left: 1vw;
+                        }
+                    }
+                }
+    
+                .btnBox {
+                    width: 100%;
+                    height: auto;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-evenly;
+                    padding: 8px;
+    
+                    button {
+                        width: 80%;
+                        height: 8vw;
+                        @include mainBtn;
+                        font-size: 3vw;
+    
+                        &.try {
+                            @include lightBtn_1;
+                            font-size: 3vw;
+                            margin-right: 5px;
+                        }
+
+                        span {
+                            display: block;
+                            transform: scale(0.9);
+                        }
+                    }
+                }
+            }
+        }
+
+        &.sport {
+            grid-template-columns: repeat(1,1fr);
+            padding: 0 8px;
+
+            li {
+
+                .textBox {
+                    top: 16px;
+                    left: 16px;
+
+                    .title {
+                        font-size: 7vw;
+                        margin-bottom: 2vw;
+                    }
+
+                    .sub {
+                        font-size: 5vw;
+                    }
+                }
+            }
+        }
+
+        li {
+            width: auto;
+            height: auto;
+            position: relative;
+
+            .textBox {
+                position: absolute;
+                top: 8px;
+                left: 12px;
+                width: auto;
+                height: auto;
+
+                .title {
+                    color: $mainColor_1;
+                    font-size: 5vw;
+                    font-weight: bold;
+                    margin-bottom: 1vw;
+                }
+
+                .sub {
+                    color: $game_Color;
+                    font-size: 3vw;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+}
+
+//aside
+aside {
+    position: relative;
+    .sideBtn {
+        position: fixed;
+        bottom: 64px;
+        right: 10px;
+
+        .inviteFriend {
+            width: 92px;
+            height: 108px;
+        }
+    }
+}

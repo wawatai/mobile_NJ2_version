@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="65" height="65" viewBox="0 0 65 65">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #a47d3b;
+        fill-rule: evenodd;
+        filter: url(#filter);
+      }
+    </style>
+    <filter id="filter" x="1013" y="574" width="65" height="65" filterUnits="userSpaceOnUse">
+      <feImage preserveAspectRatio="none" x="1013" y="574" width="65" height="65" result="image" xlink:href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iNjUiIGhlaWdodD0iNjUiIHZpZXdCb3g9IjAgMCA2NSA2NSI+CiAgPGRlZnM+CiAgICA8c3R5bGU+CiAgICAgIC5jbHMtMSB7CiAgICAgICAgZmlsbDogdXJsKCNsaW5lYXItZ3JhZGllbnQpOwogICAgICB9CiAgICA8L3N0eWxlPgogICAgPGxpbmVhckdyYWRpZW50IGlkPSJsaW5lYXItZ3JhZGllbnQiIHgxPSIzMi41IiB5MT0iNjUiIHgyPSIzMi41IiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+CiAgICAgIDxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iIzk3MDcwNyIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjAuOTgxIiBzdG9wLWNvbG9yPSIjY2YwNTA1Ii8+CiAgICAgIDxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iI2NmMDUwNSIvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICA8L2RlZnM+CiAgPHJlY3QgY2xhc3M9ImNscy0xIiB3aWR0aD0iNjUiIGhlaWdodD0iNjUiLz4KPC9zdmc+Cg=="/>
+      <feComposite result="composite" operator="in" in2="SourceGraphic"/>
+      <feBlend result="blend" in2="SourceGraphic"/>
+    </filter>
+  </defs>
+  <path id="形狀_9" data-name="形狀 9" class="cls-1" d="M1033.27,574h28.16v14.218a1.988,1.988,0,0,0,2.29,2.286H1078v42.417a5.747,5.747,0,0,1-6.11,6.08h-29.57a21.233,21.233,0,0,0,8.85-15.234h2.53q6.63,0,13.25,0a1.952,1.952,0,0,0,1.96-1.149,1.906,1.906,0,0,0-1.91-2.661q-7.545-.009-15.1,0h-0.76a21.477,21.477,0,0,0-2.18-7.617h9.15c2.97,0,5.95,0,8.92,0a1.909,1.909,0,1,0-.04-3.808q-9.855-.007-19.69.012a1.781,1.781,0,0,1-1.46-.647,20.435,20.435,0,0,0-13.7-6.863c-1.25-.111-2.52-0.016-3.8-0.016a3.207,3.207,0,0,1-.03-0.34c0-7.045-.02-14.091.01-21.136a5.058,5.058,0,0,1,2.21-4.294A16.309,16.309,0,0,1,1033.27,574Zm19.95,23.107q-7.005,0-14,0a1.9,1.9,0,0,0-.49,3.752,3.792,3.792,0,0,0,.82.052q10.305,0,20.62,0h6.88a1.906,1.906,0,1,0-.01-3.806Q1060.125,597.092,1053.22,597.1Zm-23.01,7.617a17.138,17.138,0,1,1-17.2,17.114A17.2,17.2,0,0,1,1030.21,604.719Zm1.92,15.234c0-1.91,0-3.746-.01-5.582a1.909,1.909,0,1,0-3.81-.015q-0.015,3.679,0,7.361a1.907,1.907,0,0,0,2.02,2.041c1.61,0.012,3.22.01,4.84,0a1.909,1.909,0,1,0-.03-3.8C1034.17,619.948,1033.19,619.953,1032.13,619.953Zm33.17-44.589c3.77,3.75,7.57,7.534,11.34,11.3H1065.3v-11.3Z" transform="translate(-1013 -574)"/>
+</svg>

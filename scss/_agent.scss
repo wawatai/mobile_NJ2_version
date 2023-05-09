@@ -1,0 +1,391 @@
+.agentWrap {
+    width: 100%;
+    height: calc(100vh - 50px);
+    overflow-y: auto;
+    padding-bottom: 20vw;
+
+    .topBanner {
+        width: 100%;
+        height: 60vw;
+        margin-bottom: 16px;
+    }
+
+    .bigTitle {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0 16px;
+
+        .title {
+            color: $agent_Color_1;
+            font-size: 10vw;
+            font-weight: bold;
+        }
+
+        .sub {
+            width: 100%;
+            border-bottom: solid 3px $border_1;
+            color: $mainColor_1;
+            font-size: 4vw;
+            font-weight: bold;
+            line-height: 5.5vw;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            padding: 12px 0;
+            margin-bottom: 32px;
+
+            &::before {
+                content: "";
+                position: absolute;
+                width: 15px;
+                height: 15px;
+                border-style: solid;
+                border-width: 0 3px 3px 0;
+                border-color: transparent $border_1 $border_1 transparent;
+                transform: rotate(45deg);
+                bottom: -12px;
+            }
+
+            &::after {
+                content: "";
+                position: absolute;
+                width: 16px;
+                height: 16px;
+                background: $bg_2;
+                transform: rotate(45deg);
+                bottom: -8px;
+            }
+
+            .floatIC_1 {
+                width: 8vw;
+                height: 20vw;
+                position: absolute;
+                left: -5px;
+                bottom: 0;
+            }
+    
+            .floatIC_2 {
+                width: 20vw;
+                height: 20vw;
+                position: absolute;
+                right: -5px;
+                top: -115px;
+            }
+        }
+
+        .imgBox {
+            width: 100%;
+            height: auto;
+            padding: 0 8px;
+
+            .infoImg {
+                width: 100%;
+                height: 143vw;
+            }
+
+            .form_1 {
+                width: 100%;
+                height: 69vw;
+                margin-bottom: 24px;
+            }
+
+            .form_2 {
+                width: 100%;
+                height: 62vw;
+                margin-bottom: 24px;
+            }
+        }
+    }
+
+    .introBox {
+        width: 100%;
+        height: auto;
+        background: $agent_BG_1;
+        padding: 48px 32px;
+        margin: -25px 0 36px;
+
+        ul {
+            width: 100%;
+            height: auto;
+
+            li {
+                width: 100%;
+                height: auto;
+                display: flex;
+                align-items: center;
+                margin-bottom: 24px;
+
+                &:last-child {
+                    margin: 0;
+                }
+
+                &:nth-of-type(1),
+                &:nth-of-type(3) {
+
+                    .img {
+                        margin-right: 20px;
+                    }
+                }
+                &:nth-of-type(2),
+                &:nth-of-type(4) {
+
+                    .img {
+                        margin-left: 20px;
+                    }
+                }
+
+                .img {
+                    width: 35vw;
+                    height: 35vw;
+                    flex-shrink: 0;
+                }
+
+                .textBox {
+                    width: 100%;
+                    height: auto;
+
+                    .title {
+                        color: $mainColor_1;
+                        font-size: 7vw;
+                        font-weight: bold;
+                        margin-bottom: 10px;
+
+                        span {
+                            display: block;
+                            font-size: 6vw;
+                        }
+                    }
+
+                    p:not(.title) {
+                        color: $agent_Color_2;
+                        font-size: 4vw;
+                        font-weight: bold;
+                        line-height: 5.5vw;
+                    }
+                }
+            }
+        }
+    }
+
+    .secondTitle {
+        width: 100%;
+        height: auto;
+        margin-bottom: 16px;
+
+        .title {
+            color: $agent_Color_1;
+            font-size: 5vw;
+            font-weight: bold;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .sub {
+            color: $mainColor_1;
+            font-size: 3.4vw;
+            font-weight: bold;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            span {
+                line-height: 5.5vw;
+            }
+        }
+    }
+
+    .applyBox {
+        width: 100%;
+        height: auto;
+        background: $agent_BG_1;
+        padding: 24px 0;
+
+        .bigTitle {
+
+            .title {
+                font-size: 7vw;
+                line-height: 9vw;
+                text-align: center;
+            }
+
+            .sub {
+                font-size: 3.4vw;
+
+                &::after {
+                    background: $agent_BG_1;
+                }
+            }
+        }
+
+        button {
+            width: 56vw;
+            height: 13vw;
+            display: block;
+            margin: 0 auto;
+        }
+    }
+}
+
+.agentHelpWrap {
+    width: 100%;
+    height: calc(100vh - 50px);
+    display: flex;
+    flex-direction: column;
+
+    //開頭選單
+    .helpHeader {
+        width: 100%;
+        height: 70px;
+        background: $help_topList_BG;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+
+        .selectBox {
+            width: 70%;
+            height: 9.87vw;
+            border-bottom: solid 1px $help_topList_Border;
+            display: flex;
+            align-items: center;
+            position: relative;
+
+            p {
+                color: $help_topList_Color;
+                font-size: 4vw;
+                font-weight: bold;
+            }
+
+            i {
+                width: 16px;
+                height: 9px;
+                position: absolute;
+                right: 0;
+                filter: grayscale(1) brightness(15);
+                pointer-events: none;
+            }
+
+            select {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                color: $mainColor_3;
+                font-size: 4vw;
+                font-weight: bold;
+                opacity: 0;
+            }
+        }
+    }
+
+    //內容
+    .helpBody {
+        width: 100%;
+        height: 100%;
+        overflow-y: auto;
+        padding-bottom: 20vw;
+
+        .bigTitle {
+            width: 92%;
+            height: 23vw;
+            border-bottom: solid 3px $border_1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            margin: 0 auto 32px;
+
+            &::before {
+                content: "";
+                position: absolute;
+                width: 15px;
+                height: 15px;
+                border-style: solid;
+                border-width: 0 3px 3px 0;
+                border-color: transparent $border_1 $border_1 transparent;
+                transform: rotate(45deg);
+                bottom: -12px;
+            }
+
+            &::after {
+                content: "";
+                position: absolute;
+                width: 16px;
+                height: 16px;
+                background: $bg_2;
+                transform: rotate(45deg);
+                bottom: -8px;
+            }
+
+            p {
+                color: $agent_Color_1;
+                font-size: 10vw;
+                font-weight: bold;
+            }
+        }
+
+        .content {
+            width: 100%;
+            height: auto;
+            padding: 0 16px;
+            margin-bottom: 24px;
+
+            &:last-child {
+                margin: 0;
+            }
+
+            .smallTitle {
+                width: 100%;
+                color: $mainColor_2;
+                font-size: 6vw;
+                font-weight: bold;
+                text-align: center;
+                margin-bottom: 24px;
+            }
+
+            p:not(.smallTitle) {
+                color: $mainColor_3;
+                font-size: 3.7vw;
+                font-weight: bold;
+                line-height: 6vw;
+
+                &.sp {
+                    padding-left: 16px;
+                }
+
+                &.qa {
+                    margin: 15px 0 5px;
+
+                    &:first-child {
+                        margin-top: 0;
+                    }
+                }
+
+                span {
+                    color: $mainColor_1;
+                }
+            }
+        }
+    }
+}
+
+.agentBottom {
+    width: 100%;
+    height: 9vw;
+    background: $agent_BG_2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    p {
+        color: $mainColor_4;
+        font-size: 3vw;
+        font-weight: bold;
+    }
+}

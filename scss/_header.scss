@@ -1,0 +1,139 @@
+//header
+header {
+    width: 100%;
+    height: auto;
+    background: $header_BG;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+
+    .content {
+        width: 100%;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+        padding: 0 8px;
+
+        //logo
+        .logo {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        //lang
+        .lang {
+            width: auto;
+            height: auto;
+            @include lang;
+
+            select {
+                width: 21vw;
+                height: 6vw;
+                background: none;
+                border: none;
+                color: $header_langColor;
+                font-size: 3.4vw;
+                font-weight: bold;
+                appearance: none;
+                padding-left: 2vw;
+
+                option {
+                    background: $header_langBG;
+                }
+            }
+        }
+
+        //loginBox
+        .loginBox {
+            width: auto;
+            height: auto;
+
+            button {
+                width: 16vw;
+                height: 7vw;
+                
+                &:first-child {
+                    @include loginBtn;
+                }
+
+                &:last-child {
+                    @include signupBtn;
+                }
+            }
+        }
+
+        .title {
+            width: 54%;
+            height: auto;
+            color: $header_Title;
+            font-size: 5.2vw;
+            font-weight: bold;
+            letter-spacing: 2px;
+            text-align: center;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            @include hiddenText;
+
+            &.small {
+                font-size: 4.5vw;
+            }
+        }
+
+        .back_arrow {
+            width: auto;
+            height: 7vw;
+            @include header_Back;
+
+            i {
+                width: 4vw;
+                height: 3vw;
+                margin-right: 5px;
+            }
+        }
+
+        .link_ic,
+        .editBtn {
+            width: 6vw;
+            height: 6vw;
+
+            &.editBtn {
+                display: none;
+
+                &.display {
+                    display: block;
+                }
+            }
+        }
+
+        .detailBtn {
+            width: auto;
+            height: 7vw;
+            @include header_Back;
+            display: none;
+
+            &.display {
+                display: flex;
+            }
+        }
+
+        .agentRegisterBtn {
+            width: auto;
+            height: 7vw;
+            @include secondBtn;
+            padding: 0 10px;
+        }
+
+        &.helpPage {
+            display: none;
+
+            &.display {
+                display: flex;
+            }
+        }
+    }
+}

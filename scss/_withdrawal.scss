@@ -1,0 +1,318 @@
+//提款
+.withWrap {
+    @include mainBG_1;
+
+    //上半
+    .walletBox {
+        width: 100%;
+        height: auto;
+        padding-top: 8px;
+        margin-bottom: 16px;
+
+        .content {
+            width: 100%;
+            height: auto;
+            @include innerBG_1;
+            padding: 16px;
+
+            .box {
+                width: 100%;
+                height: auto;
+                margin-bottom: 5vw;
+
+                &:last-child {
+                    margin: 0;
+                }
+
+                .title {
+                    width: 100%;
+                    height: auto;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    margin-bottom: 2vw;
+
+                    p {
+                        color: $mainColor_2;
+                        font-size: 4vw;
+                        font-weight: bold;
+                        display: flex;
+                        align-items: center;
+
+                        i {
+                            width: 5vw;
+                            height: 4vw;
+                            margin-left: 5px;
+                        }
+                    }
+
+                    button {
+                        width: auto;
+                        height: 6vw;
+                        @include mainBtn;
+                        font-size: 3.4vw;
+                        padding: 0 3vw;
+                    }
+                }
+
+                .amount {
+                    width: 100%;
+                    height: auto;
+                    padding: 2px 0;
+                    border-bottom: solid 1px $border_1;
+
+                    p {
+                        color: $mainColor_1;
+                        font-size: 6vw;
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+    }
+
+    .lineTitle {
+        width: 100%;
+        height: auto;
+        display: flex;
+        align-items: center;
+        margin-bottom: 16px;
+
+        .star_ic {
+            width: 4vw;
+            height: 4vw;
+            flex-shrink: 0;
+            margin-right: 5px;
+        }
+
+        p {
+            color: $mainColor_1;
+            font-size: 4vw;
+            font-weight: bold;
+            flex-shrink: 0;
+            margin-right: 5px;
+        }
+
+        .line {
+            width: 100%;
+            height: 2px;
+            background: $border_1;
+        }
+    }
+
+    //錢包列
+    .walletList { 
+        width: 100%;
+        height: auto;
+        border-bottom: solid 2px $border_1;
+        margin-bottom: 16px;
+
+        button {
+            width: 42vw;
+            height: 9.87vw;
+            @include mainBtn;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 16px;
+
+            &.display {
+                display: flex;
+            }
+
+            i {
+                width: 4vw;
+                height: 4vw;
+                margin-left: 5px;
+                filter: grayscale(1) brightness(15);
+                transform: rotate(90deg);
+            }
+        }
+
+        .forPlatform {
+            width: 100%;
+            height: 0;
+            overflow: hidden;
+            padding: 0 16px;
+
+            &.active {
+                height: auto;
+            }
+
+            .title {
+                width: 100%;
+                height: auto;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin-bottom: 16px;
+
+                p {
+                    color: $disable;
+                    font-size: 3.4vw;
+                    font-weight: bold;
+                }
+            }
+
+            ul {
+                width: 100%;
+                height: auto;
+                display: grid;
+                grid-template-columns: repeat(2,1fr);
+                gap: 8px 10px;
+
+                li {
+                    width: auto;
+                    height: auto;
+                    border-radius: 10px;
+                    background: $bg_2;
+                    box-shadow: 1px 1px 2px 0 $mainShadow_1;
+                    padding: 10px 16px;
+
+                    div {
+                        width: 100%;
+                        color: $mainColor_2;
+                        font-size: 3.4vw;
+                        font-weight: bold;
+                        letter-spacing: 1px;
+                        @include hiddenText;
+                    }
+
+                    p {
+                        color: $mainColor_1;
+                        font-size: 5vw;
+                        font-weight: bold;
+                        margin-top: 10px;
+                    }
+                }
+            }
+
+            .closeBtn {
+                margin-top: 16px;
+
+                i {
+                    transform: rotate(-90deg);
+                }
+            }
+        }
+    }
+
+    //下半
+    .withContent {
+        width: 100%;
+        height: auto;
+        padding: 0 16px;
+        border-bottom: solid 2px $border_1;
+
+        .limitBox {
+            width: 100%;
+            height: auto;
+            background: $memberInfo_SercurityBG;
+            padding: 12px;
+
+            p {
+                color: $memberInfo_SercurityColor;
+                font-size: 3.4vw;
+                font-weight: bold;
+                line-height: 4.5vw;
+            }
+        }
+        
+        .smallTitle {
+            color: $mainColor_2;
+            font-size: 4vw;
+            font-weight: bold;
+            margin: 10px 0 5px;
+        }
+
+        .selectBox {
+            width: 100%;
+            height: auto;
+            position: relative;
+
+            select {
+                width: 100%;
+                height: 9.87vw;
+                @include mainSelect;
+            }
+
+            .arrow_ic {
+                width: 18px;
+                height: 9px;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                right: 16px;
+            }
+        }
+
+        .inputBox {
+            width: 100%;
+            height: auto;
+
+            input {
+                width: 100%;
+                height: 9.87vw;
+                @include mainInput;
+            }
+        }
+
+        .remind {
+            color: $remind;
+            font-size: 3.4vw;
+            font-weight: bold;
+            margin: 5px 0 24px;
+        }
+
+        button {
+            width: 80%;
+            height: 11vw;
+            @include secondBtn;
+            display: block;
+            margin: 0 auto 16px;
+        }
+    }
+
+    //提醒
+    .remindBox {
+        width: 100%;
+        height: auto;
+        background: $bg_2;
+        box-shadow: 1px 1px 2px 0 $mainShadow_2;
+        border-radius: 5px;
+        margin-top: 16px;
+        padding: 0 16px 16px;
+
+        .lineTitle {
+            padding: 10px 0;
+            margin: 0;
+            
+            p {
+                margin: 0;
+            }
+
+            .star_ic {
+                margin: 0 5px;
+            }
+        }
+
+        .text {
+            color: $mainColor_3;
+            font-size: 3.4vw;
+            font-weight: bold;
+            line-height: 4.5vw;
+
+            &.sp {
+                margin-top: 10px;
+            }
+        }
+
+        .remind {
+            color: $remind;
+            font-size: 3.4vw;
+            font-weight: bold;
+            line-height: 4.5vw;
+            margin-top: 10px;
+        }
+    }
+}

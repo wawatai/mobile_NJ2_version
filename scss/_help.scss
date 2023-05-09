@@ -1,0 +1,501 @@
+//幫助中心外層
+.helpWrap {
+    @include mainBG_1;
+    padding: 0 0 20vw;
+    display: none;
+
+    &.display {
+        display: block;
+    }
+
+    //開頭選單
+    .helpHeader {
+        width: 100%;
+        height: 70px;
+        background: $help_topList_BG;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .selectBox {
+            width: 70%;
+            height: 9.87vw;
+            border-bottom: solid 1px $help_topList_Border;
+            display: flex;
+            align-items: center;
+            position: relative;
+
+            p {
+                color: $help_topList_Color;
+                font-size: 4vw;
+                font-weight: bold;
+            }
+
+            i {
+                width: 16px;
+                height: 9px;
+                position: absolute;
+                right: 0;
+                filter: grayscale(1) brightness(15);
+                pointer-events: none;
+            }
+
+            select {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                color: $mainColor_3;
+                font-size: 4vw;
+                font-weight: bold;
+                opacity: 0;
+            }
+        }
+    }
+
+    //內容
+    .helpBody {
+        width: 100%;
+        height: calc(100vh - 120px);
+        overflow-y: auto;
+        padding: 0 24px 20vw;
+
+        ul {
+            width: 100%;
+            height: auto;
+            padding-top: 16px;
+
+            li {
+                width: 100%;
+                height: 11vw;
+                @include lightBtn_1;
+                font-size: 4vw;
+                display: flex;
+                align-items: center;
+                position: relative;
+                padding: 0 16px;
+                margin-bottom: 10px;
+
+                &:active,&.active {
+
+                    i {
+                        filter: grayscale(1) brightness(15);
+                    }
+                }
+
+                &:last-child {
+                    margin: 0;
+                }
+                
+                i {
+                    width: 16px;
+                    height: 9px;
+                    position: absolute;
+                    right: 16px;
+                    pointer-events: none;
+                    transform: rotate(-90deg);
+                }
+            }
+        }
+    }
+}
+
+//幫助中心內層
+.helpInner {
+    @include mainBG_1;
+    display: none;
+
+    &.display {
+        display: block;
+    }
+
+    li {
+        width: 100%;
+        height: auto;
+        display: none;
+        padding-top: 16px;
+
+        &.display {
+            display: block;
+        }
+
+        .lineTitle {
+            width: 100%;
+            height: auto;
+            display: flex;
+            align-items: center;
+            margin-bottom: 16px;
+    
+            .star_ic {
+                width: 4vw;
+                height: 4vw;
+                flex-shrink: 0;
+                margin-right: 5px;
+            }
+    
+            p {
+                color: $mainColor_1;
+                font-size: 4vw;
+                font-weight: bold;
+                flex-shrink: 0;
+                margin-right: 5px;
+            }
+    
+            .line {
+                width: 100%;
+                height: 2px;
+                background: $border_1;
+            }
+        }
+
+        .text {
+            color: $mainColor_3;
+            font-size: 3.7vw;
+            font-weight: bold;
+            line-height: 4.5vw;
+            padding: 0 8px;
+
+            &.smallTitle {
+                color: $mainColor_2;
+                font-size: 4vw;
+                margin: 24px 0 10px;
+
+                &:nth-of-type(1) {
+                    margin-top: 0;
+                }
+            }
+
+            &.mar {
+                margin-top: 8px;
+            }
+
+            a {
+                color: $click;
+                text-decoration: none;
+            }
+
+            .remind {
+                color: $remind;
+            }
+        }
+
+        .img {
+            width: 100%;
+            margin: 10px 0;
+
+            &.help_new_1 {
+                height: 70vw;
+            }
+            &.help_new_2 {
+                height: 70vw;
+            }
+            &.help_about_license {
+                height: 135vw;
+            }
+            &.depositWay {
+                height: 53vw;
+            }
+        }
+
+        .uploadBox {
+            width: 100%;
+            height: auto;
+            border-bottom: solid 2px $border_1;
+            padding-bottom: 24px;
+
+            &:last-child {
+                border: none;
+                padding: 0;
+            }
+
+            .text {
+                margin-bottom: 16px;
+            }
+
+            .box {
+                width: 90%;
+                height: auto;
+                background: $bg_2;
+                border-radius: 16px;
+                border: dotted 5px $help_uploadBox_Border;
+                box-shadow: 0 0 0 10px $bg_2;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                padding: 45px 0;
+                margin: 0 auto;
+
+                &.mar {
+                    margin-top: 24px;
+                }
+
+                &:nth-of-type(1) {
+                    margin-bottom: 24px;
+                }
+
+                i {
+                    width: 22vw;
+                    height: 16vw;
+                    margin-bottom: 3vw;
+                }
+
+                button {
+                    width: auto;
+                    height: 9.87vw;
+                    @include mainBtn;
+                    padding: 0 20px;
+                    margin-bottom: 16px;
+                }
+
+                .remind {
+                    color: $remind;
+                    font-size: 3vw;
+                }
+            }
+
+            .sendBtn {
+                width: 50vw;
+                height: 9.87vw;
+                @include secondBtn;
+                display: block;
+                margin: 40px auto 10px;
+            }
+
+            .reBtn {
+                width: 50vw;
+                height: 9.87vw;
+                @include lightBtn_1;
+                display: block;
+                margin: 0 auto;
+            }
+        }
+
+        .topOpen {
+            width: 100%;
+            height: 70px;
+            border-bottom: solid 2px $border_1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-bottom: 8px;
+            margin-bottom: 10px;
+
+            button {
+                width: 60vw;
+                height: 11vw;
+                @include mainBtn;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                i {
+                    width: 4vw;
+                    height: 4vw;
+                    transform: rotate(90deg);
+                    filter: grayscale(1) brightness(15);
+                    margin-left: 5px;
+                }
+            }
+        }
+
+        .box {
+            width: 92.27vw;
+            height: 12vw;
+            @include innerBG_1;
+            box-shadow: 0 2px 1px 0 $mainShadow_1;
+            overflow: hidden;
+            margin: 0 auto 10px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            &.active {
+                height: auto;
+                border-color: $border_1;
+
+                .titleBox {
+                    border-bottom: solid 1px $border_1;
+
+                    p {
+                        color: $mainColor_1;
+                    }
+
+                    i {
+                        transform: scaleY(-1);
+                    }
+                }
+            }
+
+            .titleBox {
+                width: 100%;
+                height: 12vw;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 0 16px;
+
+                p {
+                    color: $mainColor_2;
+                    font-size: 4vw;
+                    font-weight: bold;
+                    line-height: 5.5vw;
+                }
+
+                i {
+                    width: 0;
+                    height: 0;
+                    border-style: solid;
+                    border-width: 8px 6px 0 6px;
+                    border-color: $border_1 transparent;
+                }
+            }
+
+            .content {
+                width: 100%;
+                height: auto;
+                padding: 12px;
+
+                p {
+                    color: $mainColor_3;
+                    font-size: 3.7vw;
+                    font-weight: bold;
+                    line-height: 4.5vw;
+                    margin-bottom: 10px;
+
+                    &:last-child {
+                        margin: 0;
+                    }
+
+                    a {
+                        color: $click;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.helpContact {
+    @include mainBG_1;
+    padding: 16px 16px 0;
+
+    .lineTitle {
+        width: 100%;
+        height: auto;
+        display: flex;
+        align-items: center;
+        margin-bottom: 16px;
+
+        &.sp {
+            margin-bottom: 5px;
+
+            p {
+                width: 100%;
+                line-height: 5.5vw;
+                flex-shrink: 1;
+            }
+        }
+
+        .star_ic {
+            width: 4vw;
+            height: 4vw;
+            flex-shrink: 0;
+            margin-right: 5px;
+        }
+
+        p {
+            color: $mainColor_1;
+            font-size: 4vw;
+            font-weight: bold;
+            flex-shrink: 0;
+            margin-right: 5px;
+        }
+
+        .line {
+            width: 100%;
+            height: 2px;
+            background: $border_1;
+        }
+    }
+
+    .outerLine {
+        width: 100%;
+        height: 2px;
+        background: $border_1;
+        margin-bottom: 16px;
+    }
+
+    .contentBox {
+        width: 100%;
+        height: auto;
+        padding: 0 16px;
+        margin-bottom: 24px;
+
+        .text {
+            color: $mainColor_3;
+            font-size: 3.7vw;
+            font-weight: bold;
+            line-height: 6vw;
+            margin-bottom: 20px;
+        }
+
+        .serviceBtn {
+            width: 100%;
+            height: auto;
+            @include serviceBtn;
+
+            i {
+                width: 12vw;
+                height: 12vw;
+                margin-right: 16px;
+                flex-shrink: 0;
+            }
+
+            div {
+                width: 100%;
+                height: auto;
+
+                .smallTitle {
+                    color: $service_btnTitle;
+                    font-size: 4vw;
+                    font-weight: bold;
+                    margin-bottom: 10px;
+                }
+
+                .sub {
+                    color: $disable;
+                    font-size: 3.4vw;
+                    font-weight: bold;
+                    margin-bottom: 10px;
+                }
+
+                .cnt {
+                    color: $mainColor_3;
+                    font-size: 3.7vw;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+
+    .infoBox {
+        width: 100%;
+        height: auto;
+        padding: 0 16px;
+
+        p {
+            color: $mainColor_2;
+            font-size: 3.7vw;
+            font-weight: bold;
+            margin-bottom: 10px;
+
+            &:last-child {
+                margin: 0;
+            }
+        }
+    }
+}

@@ -1,0 +1,403 @@
+//優惠選擇列
+.eventApplyType {
+    width: 100%;
+    height: auto;
+    padding: 8px 8px 0;
+    background: $bg_1;
+
+    ul {
+        width: 100%;
+        height: auto;
+        display: flex;
+        border-bottom: solid 2px $border_1;
+        overflow-x: auto;
+
+        li {
+            width: auto;
+            height: 45px;
+            @include pageStyle_1;
+            margin-right: 5px;
+            padding: 0 10px;
+            flex-shrink: 0;
+
+            &:last-child {
+                margin: 0;
+            }
+        }
+    }
+}
+
+//優惠列表
+.applyList {
+    @include mainBG_1;
+    display: none;
+
+    &.display {
+        display: block;
+    }
+
+    .listBox {
+        width: 100%;
+        height: auto;
+        padding: 8px 16px;
+
+        .list {
+            width: 100%;
+            height: auto;
+            background: $bg_2;
+            box-shadow: 0 1px 1px 1px $mainShadow_1;
+            border-radius: 10px;
+            position: relative;
+            padding: 0 12px;
+            margin-bottom: 10px;
+
+            .title {
+                width: 100%;
+                height: 9vw;
+                border-bottom: solid 1px $border_1;
+                display: flex;
+                align-items: center;
+                color: $mainColor_2;
+                font-size: 4vw;
+                font-weight: bold;
+            }
+
+            .tips {
+                width: auto;
+                height: auto;
+                @include smallTip;
+                display: none;
+                right: 12px;
+                top: 18px;
+
+                &.display {
+                    display: inline-block;
+                }
+            }
+
+            ul {
+                width: 100%;
+                height: auto;
+
+                li {
+                    width: 100%;
+                    height: 9vw;
+                    border-bottom: solid 1px $table_innerBorder;
+                    color: $mainColor_3;
+                    font-size: 3.7vw;
+                    font-weight: bold;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding: 0 8px;
+
+                    &:last-child {
+                        border: none;
+                    }
+
+                    &.cur {
+                        background: $currentBG;
+                    }
+
+                    &.btnBox {
+                        height: 15vw;
+                        justify-content: center;
+
+                        button {
+                            width: 33vw;
+                            height: 9vw;
+                            @include mainBtn;
+                            font-size: 3.4vw;
+                            margin-right: 10px;
+
+                            &:last-child {
+                                @include secondBtn;
+                                margin: 0;
+                            }
+                        }
+                    }
+
+                    p {
+                        color: $mainColor_1;
+                        font-size: 3.7vw;
+                        font-weight: bold;
+
+                        span {
+                            color: $remind;
+                        }
+                    }
+                }
+            }
+
+            .btnBox {
+                width: 100%;
+                height: auto;
+                box-sizing: border-box;
+                padding: 15px 12px;
+                display: flex;
+                justify-content: space-between;
+
+                button {
+                    width: calc((100% - 10px) / 2);
+                    height: 32px;
+
+                    &.applyBtn {
+                        @include mainBtn;
+                    }
+
+                    &.checkBtn {
+                        @include secondBtn;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//優惠申請紀錄
+.applyRecord {
+    @include mainBG_1;
+    display: none;
+
+    &.display {
+        display: block;
+    }
+
+    .searchContent {
+        width: 100%;
+        height: auto;
+        padding: 0 16px;
+        border-bottom: solid 2px $border_1;
+
+        .top {
+            width: 100%;
+            height: auto;
+
+            .smallTitle {
+                color: $mainColor_2;
+                font-size: 3.4vw;
+                font-weight: bold;
+                margin: 10px 0 8px;
+            }
+
+            .selectBox {
+                width: 100%;
+                height: auto;
+                position: relative;
+
+                select {
+                    width: 100%;
+                    height: 9.87vw;
+                    @include mainSelect;
+                }
+
+                .arrow_ic {
+                    width: 18px;
+                    height: 9px;
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    right: 16px;
+                    pointer-events: none;
+                }
+            }
+
+            .inputBox {
+                width: 100%;
+                height: 9.87vw;
+                @include mainInput;
+                box-shadow: none;
+                position: relative;
+
+                input {
+                    width: auto;
+                    height: 100%;
+                    background: none;
+                    border: none;
+                    color: $mainColor_3;
+                    font-size: 4vw;
+                    font-weight: bold;
+                }
+
+                .date_ic {
+                    width: 4vw;
+                    height: 4vw;
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    right: 16px;
+                    pointer-events: none;
+                }
+            }
+        }
+
+        .date {
+            width: 100%;
+            height: auto;
+            display: flex;
+            justify-content: space-between;
+            margin: 16px 0;
+
+            button {
+                width: 23%;
+                height: 9.87vw;
+                @include dateBtn;
+            }
+        }
+
+        .check {
+            width: 100%;
+            height: 11vw;
+            @include secondBtn;
+            margin-bottom: 16px;
+        }
+    }
+
+    .reviewBody {
+        width: 100%;
+        height: auto;
+        box-sizing: border-box;
+        padding: 10px 14px;
+
+        .noData {
+            display: none;
+            width: 100%;
+            height: auto;
+            color: $disable;
+            font-weight: bold;
+            font-size: 3vw;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 20px;
+
+            &.display {
+                display: flex;
+            }
+
+            .img {
+                display: block;
+                width: 180px;
+                height: 180px;
+                margin-bottom: 20px;
+            }
+        }
+
+        .recordBox {
+            display: none;
+            width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+
+            &.display {
+                display: block;
+            }
+
+            &.fail {
+
+                ul {
+                    position: relative;
+
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        width: 100%;
+                        height: 100%;
+                        background: $filter;
+                        opacity: 0.5;
+                    }
+                }
+            }
+
+            .title {
+                width: 100%;
+                height: 9vw;
+                background: $table_TitleBG;
+                border-radius: 16px 16px 0 0;
+                color: $table_Title;
+                font-size: 4vw;
+                font-weight: bold;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                overflow: hidden;
+                padding-left: 16px;
+                
+                .review {
+                    width: auto;
+                    height: 100%;
+                    background: $eventApply_reviewBG;
+                    display: flex;
+                    align-items: center;
+                    position: relative;
+                    padding-right: 16px;
+
+                    &.fail {
+                        background: $eventApply_reviewBG_fail;
+
+                        &::before {
+                            border-color: $eventApply_reviewBG_fail transparent;
+                        }
+                    }
+
+                    &.sus {
+                        background: $eventApply_reviewBG_sus;
+
+                        &::before {
+                            border-color: $eventApply_reviewBG_sus transparent;
+                        }
+                    }
+
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        bottom: 0;
+                        left: -4vw;
+                        width: 0;
+                        height: 0;
+                        border-style: solid;
+                        border-width: 9vw 0 0 4vw;
+                        border-color: $eventApply_reviewBG transparent;
+                    }
+
+                    p {
+                        color: $mainColor_4;
+                        font-size: 3.7vw;
+                        font-weight: bold;
+                        margin-left: 2vw;
+                    }
+                }
+            }
+
+            ul {
+                width: 100%;
+                height: auto;
+                background: $table_BG;
+                border: solid 1px $table_Border;
+                border-top: none;
+                padding: 0 12px;
+
+                li {
+                    width: 100%;
+                    height: 9vw;
+                    border-bottom: solid 1px $table_innerBorder;
+                    color: $mainColor_3;
+                    font-size: 3.7vw;
+                    font-weight: bold;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+
+                    &:last-child {
+                        border: none;
+                    }
+
+                    p {
+                        color: $mainColor_1;
+                    }
+                }
+            }
+        }
+    }
+}

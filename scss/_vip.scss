@@ -1,0 +1,391 @@
+//VIP會員
+.vipWrap {
+    @include mainBG_1;
+
+    //上部
+    .topBox {
+        width: 100%;
+        height: auto;
+        padding-top: 8px;
+        margin-bottom: 16px;
+
+        .cardBG {
+            width: 100%;
+            height: 41vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .medal {
+                width: 28vw;
+                height: 30vw;
+                filter: drop-shadow(2px 3px 5px #00000080);
+                margin-right: 20px;
+            }
+
+            .textBox {
+                width: auto;
+                height: auto;
+
+                .title {
+                    color: $mainColor_4;
+                    font-size: 6vw;
+                    font-weight: bold;
+                    text-shadow: 2px 3px 0 $mainShadow_2;
+                    margin-bottom: 16px;
+                }
+
+                .row {
+                    width: auto;
+                    height: auto;
+                    margin-bottom: 10px;
+
+                    &:last-child {
+                        margin: 0;
+                    }
+
+                    .smallTitle {
+                        color: $vip_cardTitle;
+                        font-size: 4vw;
+                        font-weight: bold;
+                        text-shadow: 2px 3px 0 $mainShadow_2;
+                        margin-bottom: 5px;
+                    }
+
+                    .text {
+                        color: $mainColor_4;
+                        font-size: 4vw;
+                        font-weight: bold;
+                        text-shadow: 2px 3px 0 $mainShadow_2;
+                    }
+                }
+            }
+        }
+    }
+
+    .lineTitle {
+        width: 100%;
+        height: auto;
+        display: flex;
+        align-items: center;
+        margin-bottom: 16px;
+
+        .star_ic {
+            width: 4vw;
+            height: 4vw;
+            flex-shrink: 0;
+            margin-right: 5px;
+        }
+
+        p {
+            color: $mainColor_1;
+            font-size: 4vw;
+            font-weight: bold;
+            flex-shrink: 0;
+            margin-right: 5px;
+        }
+
+        .line {
+            width: 100%;
+            height: 2px;
+            background: $border_1;
+        }
+    }
+
+    //會員權利
+    .enjoyBox {
+        width: 100%;
+        height: auto;
+        padding: 0 12px 24px;
+        border-bottom: solid 2px $border_1;
+
+        ul {
+            width: 100%;
+            height: auto;
+
+            li {
+                width: 100%;
+                height: 11vw;
+                @include innerBG_2;
+                color: $mainColor_2;
+                font-size: 4vw;
+                font-weight: bold;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 0 16px 0 21px;
+                margin-bottom: 10px;
+
+                &:last-child {
+                    margin: 0;
+                }
+
+                p {
+                    color: $mainColor_1;
+                }
+            }
+        }
+    }
+    
+    //查看VIP詳情
+    .detailBtn {
+        width: 92%;
+        height: 42vw;
+        display: block;
+        margin: 40px auto;
+    }
+}
+
+//各層級詳情
+.vipDetail {
+    @include mainBG_1;
+    padding-top: 16px;
+
+    .lineTitle {
+        width: 100%;
+        height: auto;
+        display: flex;
+        align-items: center;
+        margin-bottom: 16px;
+
+        .star_ic {
+            width: 4vw;
+            height: 4vw;
+            flex-shrink: 0;
+            margin-right: 5px;
+        }
+
+        p {
+            color: $mainColor_1;
+            font-size: 4vw;
+            font-weight: bold;
+            flex-shrink: 0;
+            margin-right: 5px;
+        }
+
+        .line {
+            width: 100%;
+            height: 2px;
+            background: $border_1;
+        }
+    }
+
+    .lvWrap {
+        width: 100%;
+        height: auto;
+        position: relative;
+
+        .list {
+            width: 100%;
+            height: auto;
+            background: $table_BG;
+            border-radius: 10px;
+            border: solid 1px $table_Border;
+            display: flex;
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 16px;
+
+            .left {
+                width: 35%;
+                height: auto;
+                flex-shrink: 0;
+
+                li {
+                    height: 40px;
+                    display: flex;
+                    align-items: center;
+
+                    &.smallTitle {
+                        background: $table_TitleSecondBG;
+
+                        p {
+                            border: none;
+                        }
+                    }
+
+                    p {
+                        width: 100%;
+                        border-right: solid 1px $table_innerBorder;
+                        color: $mainColor_3;
+                        font-size: 3.4vw;
+                        font-weight: bold;
+                        text-align: center;
+                    }
+                }
+            }
+
+            .right{
+                width: 100%;
+                height: auto;
+                display: flex;
+                overflow-x: auto;
+                position: relative;
+
+                ul {
+                    width: auto;
+                    height: auto;
+                    flex-shrink: 0;
+
+                    &:last-child {
+
+                        li {
+
+                            p {
+                                border: none;
+                            }
+                        }
+                    }
+
+                    li {
+                        width: auto;
+                        min-width: 30vw;
+                        height: 40px;
+                        display: flex;
+                        align-items: center;
+    
+                        &.smallTitle {
+                            background: $table_TitleBG;
+    
+                            p {
+                                color: $mainColor_4;
+                                border: none;
+                            }
+                        }
+    
+                        p {
+                            width: 100%;
+                            border-right: solid 1px $table_innerBorder;
+                            color: $mainColor_3;
+                            font-size: 3.4vw;
+                            font-weight: bold;
+                            text-align: center;
+                            padding: 0 16px;
+                        }
+                    }
+                }
+            }
+
+            .fingerBox {
+                width: auto;
+                height: auto;
+                position: absolute;
+                right: 30px;
+                bottom: 50px;
+
+                .arrowBox {
+                    width: auto;
+                    height: auto;
+                    position: relative;
+
+                    .arrow_ic {
+                        width: 0;
+                        height: 0;
+                        position: absolute;
+                        top: 0;
+                        border-style: solid;
+                        border-color: transparent $border_1;
+                        border-width: 6px 8px 6px 0;
+
+                        &:first-child {
+                            left: -11px;
+                            animation: arrowMove_1 0.5s linear 0s infinite alternate;
+                        }
+
+                        &:last-child {
+                            right: -11px;
+                            border-width: 6px 0 6px 8px;
+                            animation: arrowMove_2 0.5s linear 0s infinite alternate;
+                        }
+                    }
+
+                    .line {
+                        width: 20px;
+                        height: 2px;
+                        background: $border_1;
+                        position: absolute;
+                        left: -50%;
+                        transform: translateX(-50%);
+                        top: 5px;
+                    }
+                }
+
+                .finger {
+                    width: 30px;
+                    height: 30px;
+                    position: absolute;
+                    left: -6px;
+                    top: 12px;
+                }
+
+                @keyframes arrowMove_1 {
+                    0% {
+                        transform: translateX(0);
+                    }
+
+                    100% {
+                        transform: translateX(-50%);
+                    }
+                }
+                @keyframes arrowMove_2 {
+                    0% {
+                        transform: translateX(0);
+                    }
+
+                    100% {
+                        transform: translateX(50%);
+                    }
+                }
+            }
+        }
+    }
+
+    .remindBox {
+        width: 100%;
+        height: auto;
+        background: $bg_2;
+        border-radius: 5px;
+        box-shadow: 1px 1px 2px 0 $mainShadow_2;
+        padding: 0 16px 16px;
+
+        .lineTitle {
+            padding: 10px 0;
+            margin: 0;
+            
+            p {
+                margin: 0;
+            }
+
+            .star_ic {
+                margin: 0 5px;
+            }
+        }
+
+        .text {
+            color: $mainColor_3;
+            font-size: 3.4vw;
+            font-weight: bold;
+            line-height: 4.5vw;
+        }
+
+        .remind {
+            color: $remind;
+            font-size: 3.4vw;
+            font-weight: bold;
+            line-height: 4.5vw;
+            margin-top: 10px;
+        }
+
+        .smallTitle {
+            color: $mainColor_2;
+            font-size: 3.4vw;
+            font-weight: bold;
+            line-height: 4.5vw;
+            margin: 10px 0 5px;
+
+            &:first-child {
+                margin-top: 0;
+            }
+        }
+    }
+}

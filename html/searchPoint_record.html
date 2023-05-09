@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../js/javascript.js"></script>
+    <link rel="shortcut icon" href="../images/NJLOGO_64x64.ico" type="image/x-icon">
+</head>
+<body>
+    <!--header-->
+    <header>
+        <!--content-->
+        <div class="content">
+            <button class="back_arrow" onclick="window.location.href='./member.html'">
+                <i class="arrow_ic"></i>
+                戻る
+            </button>
+            <div class="title small">∞4世代ボーナス報酬</div>
+        </div>
+    </header>
+    <!--main-->
+    <main>
+        <div class="recordTop">
+            <ul>
+                <li onclick="window.location.href='./searchPoint.html'">∞4世代ボーナス報酬</li>
+                <li class="active">ボーナス履歷</li>
+            </ul>
+        </div>
+        <!--查詢紅利-->
+        <div class="bettingWrap">
+            <div class="searchContent">
+                <div class="top">
+                    <p class="smallTitle">日付</p>
+                    <div class="inputBox">
+                        <input type="date" value="2022-05-13">
+                        ~
+                        <input type="date" value="2022-05-13">
+                        <i class="date_ic"></i>
+                    </div>
+                </div>
+                <div class="date">
+                    <button>昨日</button>
+                    <button class="active">今日</button>
+                    <button>今週</button>
+                    <button>今月</button>
+                </div>
+                <button class="check">検索</button>
+            </div>
+            <div class="list">
+                <p class="noData">
+                    <span class="img"></span>
+                    データなし
+                </p>
+                <div class="dealBox display">
+                    <p class="title">番号 1659</p>
+                    <ul>
+                        <li>
+                            時間
+                            <p>2020-10-15</p>
+                        </li>
+                        <li>
+                            タイプ
+                            <p>償還を申し出る</p>
+                        </li>
+                        <li>
+                            金額
+                            <p>126.00</p>
+                        </li>
+                        <li>
+                            備考
+                            <p>-</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!--footer-->
+    <footer class="user">
+        <ul>
+            <li>
+                <a class="home" href="./index_inner.html"></a>
+            </li>
+            <li>
+                <a class="promotion" href="./event.html"></a>
+            </li>
+            <li>
+                <a class="wallet" href="./wallet.html"></a>
+            </li>
+            <li>
+                <a class="cs" href="./help_often_contact.html"></a>
+            </li>
+            <li class="active">
+                <a class="member" href="./member.html"></a>
+            </li>
+        </ul>
+    </footer>
+    <!--彈窗-->
+    <div class="filter"></div>
+</body>
+</html>

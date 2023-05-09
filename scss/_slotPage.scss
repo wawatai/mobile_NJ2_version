@@ -1,0 +1,176 @@
+//slot頁
+.slotWrap {
+    @include mainBG_1;
+    overflow-y: hidden;
+
+    //slot上選單
+    .slotHeader {
+        width: 100%;
+        height: auto;
+
+        //選單
+        .listBox {
+            width: 100%;
+            height: auto;
+
+            ul {
+                width: 100%;
+                height: auto;
+                display: flex;
+                justify-content: space-between;
+                padding: 16px 0;
+
+                li {
+                    width: 31vw;
+                    height: 9vw;
+                    @include pageStyle_2;
+
+                    i {
+                        width: 4vw;
+                        height: 4vw;
+                        margin-right: 5px;
+                    }
+                }
+            }
+        }
+
+        //搜尋列
+        .searchBox {
+            width: 100%;
+            height: auto;
+            position: relative;
+            padding: 0 8px;
+            margin-bottom: 8px;
+
+            .search_ic {
+                width: 4vw;
+                height: 4vw;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                left: 20px;
+            }
+
+            input {
+                width: 100%;
+                height: 8vw;
+                @include mainInput;
+                border-radius: 30px;
+                padding-left: 35px;
+            }
+        }
+    }
+
+    //slot遊戲列
+    .gameList {
+        width: 100%;
+        height: calc(100vh - 155px);
+        margin: 0 auto;
+        padding: 0 8px 20vw;
+        overflow-y: auto;
+
+        .scrollBox {
+            width: 100%;
+            height: auto;
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            gap: 8px;
+            align-content: flex-start;
+
+            .gameBox {
+                width: auto;
+                height: auto;
+                background: $slotPage_boxBG;
+                border-radius: 10px;
+                border: solid 1px $slotPage_boxBorder;
+                font-size: 0;
+                overflow: hidden;
+    
+                .title {
+                    width: 100%;
+                    height: 8vw;
+                    display: flex;
+                    justify-content: space-between;
+    
+                    p {
+                        width: 73%;
+                        height: 100%;
+                        display: flex;
+                        align-items: center;
+                        padding-left: 8px;
+                        
+                        span {
+                            width: 100%;
+                            color: $mainColor_3;
+                            font-size: 3.4vw;
+                            font-weight: bold;
+                            @include hiddenText;
+                        }
+                    }
+    
+                    .loveBox {
+                        width: 18%;
+                        height: 100%;
+                        background: $slotPage_box_loveBG;
+                        display: flex;
+                        align-items: center;
+                        position: relative;
+    
+                        &::before {
+                            content: "";
+                            position: absolute;
+                            bottom: 0;
+                            left: -4vw;
+                            width: 0;
+                            height: 0;
+                            border-style: solid;
+                            border-width: 8vw 0 0 4vw;
+                            border-color: $slotPage_box_loveBG transparent;
+                        }
+    
+                        &.active {
+                            background: $slotPage_box_loveBG_active;
+    
+                            &::before {
+                                border-color: $slotPage_box_loveBG_active transparent;
+                            }
+                        }
+    
+                        i {
+                            width: 5vw;
+                            height: 4vw;
+                            margin-left: 1vw;
+                        }
+                    }
+                }
+    
+                .btnBox {
+                    width: 100%;
+                    height: auto;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-evenly;
+                    padding: 8px;
+    
+                    button {
+                        width: 80%;
+                        height: 8vw;
+                        @include mainBtn;
+                        font-size: 3vw;
+    
+                        &.try {
+                            @include lightBtn_1;
+                            font-size: 3vw;
+                            margin-right: 5px;
+                        }
+
+                        span {
+                            display: block;
+                            transform: scale(0.9);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

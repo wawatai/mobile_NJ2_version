@@ -1,0 +1,476 @@
+//投注紀錄
+.bettingWrap {
+    @include mainBG_1;
+
+    .searchContent {
+        width: 100%;
+        height: auto;
+        padding: 0 16px;
+        border-bottom: solid 2px $border_1;
+
+        .top {
+            width: 100%;
+            height: auto;
+
+            .smallTitle {
+                color: $mainColor_2;
+                font-size: 3.4vw;
+                font-weight: bold;
+                margin: 10px 0 8px;
+            }
+
+            .selectBox {
+                width: 100%;
+                height: auto;
+                position: relative;
+
+                select {
+                    width: 100%;
+                    height: 9.87vw;
+                    @include mainSelect;
+                }
+
+                .arrow_ic {
+                    width: 18px;
+                    height: 9px;
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    right: 16px;
+                    pointer-events: none;
+                }
+            }
+
+            .inputBox {
+                width: 100%;
+                height: 9.87vw;
+                @include mainInput;
+                box-shadow: none;
+                position: relative;
+
+                input {
+                    width: auto;
+                    height: 100%;
+                    background: none;
+                    border: none;
+                    color: $mainColor_3;
+                    font-size: 4vw;
+                    font-weight: bold;
+                }
+
+                .date_ic {
+                    width: 4vw;
+                    height: 4vw;
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    right: 16px;
+                    pointer-events: none;
+                }
+            }
+        }
+
+        .date {
+            width: 100%;
+            height: auto;
+            display: flex;
+            justify-content: space-between;
+            margin: 16px 0;
+
+            button {
+                width: 23%;
+                height: 9.87vw;
+                @include dateBtn;
+            }
+        }
+
+        .check {
+            width: 70%;
+            height: 11vw;
+            @include secondBtn;
+            display: block;
+            font-size: 4vw;
+            margin: 0 auto 16px;
+        }
+    }
+
+    .list {
+        width: 100%;
+        height: auto;
+        padding: 12px 16px;
+
+        .noData {
+            display: none;
+            width: 100%;
+            height: auto;
+            color: $disable;
+            font-weight: bold;
+            font-size: 3vw;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 20px;
+
+            &.display {
+                display: flex;
+            }
+
+            .img {
+                display: block;
+                width: 180px;
+                height: 180px;
+                margin-bottom: 20px;
+            }
+        }
+
+        .recordBox {
+            display: none;
+            width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+
+            &.display {
+                display: block;
+            }
+
+            .title {
+                width: 100%;
+                height: 9vw;
+                background: $table_TitleBG;
+                border-radius: 16px 16px 0 0;
+                color: $table_Title;
+                font-size: 4vw;
+                font-weight: bold;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 0 16px;
+            }
+
+            ul {
+                width: 100%;
+                height: auto;
+                background: $table_BG;
+                border: solid 1px $table_Border;
+                border-top: none;
+                padding: 0 8px;
+
+                li {
+                    width: 100%;
+                    height: 9vw;
+                    border-bottom: solid 1px $table_innerBorder;
+                    color: $mainColor_3;
+                    font-size: 3.7vw;
+                    font-weight: bold;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    padding: 0 8px;
+
+                    &:last-child {
+                        border: none;
+                    }
+
+                    p {
+                        color: $mainColor_1;
+
+                        &.result {
+                            color: $remind;
+                        }
+                    }
+
+                    &.btnBox {
+                        height: 15vw;
+
+                        button {
+                            width: 50%;
+                            height: 9.87vw;
+                            @include lightBtn_1;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            margin: 0 auto;
+
+                            &:active,&.active {
+
+                                i {
+                                    filter: grayscale(1) brightness(15);
+                                }
+                            }
+
+                            i {
+                                width: 4vw;
+                                height: 4vw;
+                                margin-left: 5px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .dealBox {
+            display: none;
+            width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+
+            &.display {
+                display: block;
+            }
+
+            .title {
+                width: 100%;
+                height: 9vw;
+                background: $table_TitleBG;
+                border-radius: 16px 16px 0 0;
+                color: $table_Title;
+                font-size: 4vw;
+                font-weight: bold;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 0 16px;
+                
+                .date {
+                    color: $table_Title;
+                    font-size: 3.4vw;
+                }
+            }
+
+            ul {
+                width: 100%;
+                height: auto;
+                background: $table_BG;
+                border: solid 1px $table_Border;
+                border-top: none;
+                padding: 0 8px;
+
+                li {
+                    width: 100%;
+                    height: 9vw;
+                    border-bottom: solid 1px $table_innerBorder;
+                    color: $mainColor_3;
+                    font-size: 3.7vw;
+                    font-weight: bold;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    padding: 0 8px;
+
+                    &:last-child {
+                        border: none;
+                    }
+
+                    p {
+                        color: $mainColor_1;
+                    }
+                }
+            }
+        }
+
+        .partnerBox {
+            display: none;
+            width: 100%;
+            height: auto;
+            background: $bg_2;
+            border-radius: 16px;
+            box-shadow: 0 1px 2px 1px $mainShadow_1;
+            padding: 0 8px;
+            margin-bottom: 10px;
+
+            &.display {
+                display: block;
+            }
+
+            .title {
+                width: 100%;
+                height: 12vw;
+                border-bottom: solid 1px $border_1;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                button {
+                    width: auto;
+                    height: 8vw;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 0 10px;
+
+                    &:first-child {
+                        @include mainBtn;
+                    }
+
+                    &:last-child {
+                        @include lightBtn_1;
+                    }
+                    
+                    i {
+                        width: 3.4vw;
+                        height: 3.4vw;
+                        margin-left: 5px;
+
+                        &.search_ic {
+                            filter: grayscale(1) brightness(15);
+                        }
+                    }
+                }
+            }
+
+            ul {
+                width: 100%;
+                height: auto;
+
+                li {
+                    width: 100%;
+                    height: 9vw;
+                    border-bottom: solid 1px $table_innerBorder;
+                    color: $mainColor_3;
+                    font-size: 3.7vw;
+                    font-weight: bold;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    padding: 0 8px;
+
+                    &:last-child {
+                        border: none;
+                    }
+
+                    p {
+                        color: $mainColor_1;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//交易紀錄上選項
+.recordTop {
+    width: 100%;
+    height: auto;
+    padding: 8px 8px 0;
+    background: $bg_1;
+
+    ul {
+        width: 100%;
+        height: auto;
+        display: flex;
+        border-bottom: solid 2px $border_1;
+
+        li {
+            width: 50%;
+            height: 45px;
+            @include pageStyle_1;
+            margin-right: 5px;
+
+            &:last-child {
+                margin: 0;
+            }
+        }
+    }
+}
+
+.waterBox {
+    width: 100%;
+    height: auto;
+    padding: 12px 16px;
+
+    .noData {
+        display: none;
+        width: 100%;
+        height: auto;
+        color: $disable;
+        font-weight: bold;
+        font-size: 3vw;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 20px;
+
+        &.display {
+            display: flex;
+        }
+
+        .img {
+            display: block;
+            width: 180px;
+            height: 180px;
+            margin-bottom: 20px;
+        }
+    }
+
+    .box {
+        width: 100%;
+        height: auto;
+        margin-bottom: 10px;
+
+        .title {
+            width: 100%;
+            height: 9vw;
+            background: $table_TitleBG;
+            border-radius: 16px 16px 0 0;
+            color: $table_Title;
+            font-size: 4vw;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 16px;
+            
+            .date {
+                color: $table_Title;
+                font-size: 3.4vw;
+            }
+        }
+
+        ul {
+            width: 100%;
+            height: auto;
+            background: $table_BG;
+            border: solid 1px $table_Border;
+            border-top: none;
+            padding: 0 8px;
+
+            li {
+                width: 100%;
+                height: auto;
+                border-bottom: solid 1px $table_innerBorder;
+                color: $mainColor_3;
+                font-size: 3.7vw;
+                font-weight: bold;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 8px 0;
+
+                &:last-child {
+                    border: none;
+                }
+
+                p {
+                    color: $mainColor_1;
+                    text-align: right;
+                }
+
+                &.btnBox {
+                    padding: 24px 0;
+
+                    button {
+                        width: 48%;
+                        height: 8vw;
+
+                        &:first-child {
+                            @include mainBtn;
+                        }
+
+                        &:last-child {
+                            @include secondBtn;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,1306 @@
+//彈窗
+.filter {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: $filter;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+    display: none;
+
+    &.display {
+        display: flex;
+    }
+
+    .jumpWindow {
+        width: 90vw;
+        height: auto;
+        background: $jumpWindow_BG;
+        border: solid 1px $jumpWindow_Border;
+        border-radius: 16px;
+        position: relative;
+        display: none;
+        padding: 0 16px;
+
+        &.display {
+            display: block;
+        }
+
+        //請先XX轉跳視窗
+        &.plsGo,&.plsGo2 {
+
+            .content {
+                width: 100%;
+                height: auto;
+                padding: 24px;
+
+                p {
+                    color: $mainColor_3;
+                    font-size: 4vw;
+                    font-weight: bold;
+                    letter-spacing: 1px;
+                    line-height: 5vw;
+                    text-align: center;
+                    padding: 20px 0;
+                }
+
+                button {
+                    width: 100%;
+                    height: 42px;
+                    @include mainBtn;
+                    margin-top: 24px;
+                }
+
+                .img {
+                    width: 52vw;
+                    height: 32vw;
+                    margin: 0 auto;
+                }
+
+                .btnBox {
+                    width: 100%;
+                    height: auto;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+
+                    button {
+                        width: 80%;
+
+                        &:first-child {
+                            margin: 0;
+                        }
+
+                        &:last-child {
+                            @include secondBtn;
+                            font-size: 4vw;
+                            margin-top: 12px;
+                        }
+                    }
+                }
+            }
+        }
+
+        //登入帳密視窗
+        &.loginWindow {
+
+            form {
+                width: 100%;
+                height: auto;
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                padding: 24px;
+
+                label {
+                    width: 100%;
+                    height: auto;
+                    position: relative;
+                    margin-bottom: 16px;
+
+                    &:nth-of-type(2) {
+                        margin: 0;
+                    }
+
+                    input {
+                        width: 100%;
+                        height: 9.87vw;
+                        @include mainInput;
+                    }
+
+                    .eye {
+                        position: absolute;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        right: 10px;
+                        display: block;
+                        width: 6.13vw;
+                        height: 4.26vw;
+                    }
+                }
+
+                .forget {
+                    width: 100%;
+                    height: auto;
+                    text-align: right;
+                    margin-top: 5px;
+
+                    p {
+                        font-size: 3vw;
+                        font-weight: bold;
+                        color: $click;
+                        text-decoration: underline;
+                    }
+                }
+
+                .realLogin {
+                    width: 70%;
+                    height: 42px;
+                    @include mainBtn;
+                    display: block;
+                    margin: 6vw auto;
+                }
+
+                .register {
+                    color: $mainColor_2;
+                    font-size: 3.4vw;
+                    font-weight: bold;
+
+                    span {
+                        color: $click;
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+
+        //忘記密碼
+        &.forgetWindow {
+
+            form {
+                width: 100%;
+                height: auto;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 24px;
+
+                input {
+                    width: 100%;
+                    height: 9.87vw;
+                    @include mainInput;
+                    margin-bottom: 4vw;
+                }
+
+                button {
+                    width: 100%;
+                    height: 42px;
+                    @include mainBtn;
+                    margin-bottom: 5vw;
+                }
+
+                p {
+                    width: 100%;
+                    height: auto;
+                    color: $remind;
+                    font-size: 3.4vw;
+                    font-weight: bold;
+                    line-height: 5vw;
+                }
+            }
+        }
+
+        //註冊
+        &.registerWindow {
+
+            form {
+                width: 100%;
+                height: auto;
+                max-height: 66vh;
+                overflow-y: auto;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 24px 16px;
+
+                label {
+                    width: 100%;
+                    height: auto;
+                    position: relative;
+                    margin-bottom: 3vw;
+                    display: flex;
+                    flex-direction: column;
+                    box-sizing: border-box;
+                    padding: 0 12px 0 20px;
+
+                    &:nth-last-of-type(1),
+                    &:nth-last-of-type(2) {
+                        margin-bottom: 4vw;
+                    }
+
+                    .smallTitle {
+                        color: $mainColor_2;
+                        font-size: 4vw;
+                        font-weight: bold;
+                        margin-bottom: 1.5vw;
+                    }
+
+                    div {
+                        width: 100%;
+                        height: auto;
+                        display: flex;
+                        align-items: center;
+
+                        &.checkWord {
+                            display: block;
+                        }
+
+                        em {
+                            position: absolute;
+                            left: 0;
+                            color: $mainColor_1;
+                            font-size: 14px;
+                            font-weight: bold;
+                        }
+    
+                        input {
+                            width: 100%;
+                            height: 9.87vw;
+                            @include mainInput;
+    
+                            &.line {
+                                padding-left: 12vw;
+                            }
+                        }
+
+                        .eye {
+                            position: absolute;
+                            right: 20px;
+                            width: 6.13vw;
+                            height: 4.26vw;
+                        }
+    
+                        .date_ic {
+                            position: absolute;
+                            right: 25px;
+                            width: 4vw;
+                            height: 4vw;
+                        }
+    
+                        .line_ic,
+                        .skype_ic {
+                            position: absolute;
+                            width: 8vw;
+                            height: 8vw;
+                            left: 23px;
+                        }
+                    }
+
+                    .remind {
+                        width: 100%;
+                        color: $remind;
+                        font-size: 3.4vw;
+                        font-weight: bold;
+                        line-height: 4vw;
+                        margin-top: 5px;
+                    }
+
+                    &.isCheck {
+                        display: flex;
+                        align-items: center;
+                        flex-direction: row;
+
+                        input[type = checkbox]{
+                            width: 10px;
+                            height: 10px;
+                            @include checkBox;
+                            margin-right: 10px;
+                        }
+
+                        p {
+                            color: $mainColor_2;
+                            font-size: 3.4vw;
+                            font-weight: bold;
+                            
+                            &.ruleBtn {
+                                color: $click;
+                                margin-top: 2vw;
+                            }
+                        }
+                    }
+
+                    .code {
+                        width: auto;
+                        height: 8vw;
+                        position: absolute;
+                        right: 17px;
+                        @include lightBtn_1;
+                        border-radius: 5px;
+                        font-size: 3vw;
+                        padding: 0 7px;
+                    }
+                }
+
+                .checkBtn {
+                    width: 70%;
+                    height: 9.87vw;
+                    @include secondBtn;
+                    flex-shrink: 0;
+                }
+            }
+        }
+
+        //最新消息
+        &.news,
+        &.rules,
+        &.agentRules {
+            padding-bottom: 16px;
+
+            &.rules,
+            &.agentRules {
+
+                .title {
+
+                    p {
+                        font-size: 4vw;
+                    }
+                }
+
+                .allBtn {
+                    width: 70%;
+                    height: 11vw;
+                    @include mainBtn;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin: 16px auto 0;
+
+                    i {
+                        width: 4vw;
+                        height: 4vw;
+                        margin-left: 5px;
+                        filter: grayscale(1) brightness(15);
+                        transform: rotate(90deg);
+                    }
+                }
+
+                .box {
+
+                    .infoBox {
+                        width: 100%;
+
+                        ul {
+
+                            .smallTitle {
+                                padding: 0;
+                            }
+
+                            li:not(.smallTitle) {
+                                height: auto;
+                                padding: 8px 0;
+                                flex-direction: column;
+                                align-items: flex-start;
+
+                                p {
+                                    font-size: 14px;
+                                    white-space: unset;
+                                    line-height: 20px;
+                                    margin-bottom: 10px;
+
+                                    &.sp {
+                                        padding-left: 10px;
+                                    }
+
+                                    &:last-child {
+                                        margin: 0;
+                                    }
+
+                                    span {
+                                        color: $mainColor_1;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .checkBtn {
+                    width: 70%;
+                    height: 42px;
+                    @include mainBtn;
+                    display: block;
+                    margin: 16px auto 0;
+                }
+            }
+
+            .box {
+                width: 100%;
+                height: auto;
+                max-height: 50vh;
+                overflow-y: auto;
+                margin-top: 16px;
+
+                .infoBox {
+                    width: 96%;
+                    height: 46px;
+                    @include newsBox;
+                    margin: 0 auto 10px;
+                    padding: 0 12px;
+    
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+    
+                    &.active {
+                        height: auto;
+    
+                        ul {
+    
+                            .smallTitle {
+
+                                p {
+                                    color: $mainColor_1;
+                                }
+    
+                                .arrow_ic {
+                                    transform: scaleY(-1);
+                                }
+                            }
+                        }
+                    }
+    
+                    ul {
+                        width: 100%;
+                        height: auto;
+    
+                        li {
+                            width: 100%;
+                            height: 46px;
+                            border-bottom: solid 1px $jumpWindow_secondBorder;
+                            display: flex;
+                            align-items: center;
+                            position: relative;
+                            padding-left: 6vw;
+    
+                            &:last-child {
+                                border: none;
+                            }
+    
+                            &.smallTitle {
+                                border-color: $jumpWindow_secondBorder;
+                                justify-content: space-between;
+                                cursor: pointer;
+    
+                                .flower_ic {
+                                    width: 5vw;
+                                    height: 5vw;
+                                    position: absolute;
+                                    left: 0;
+                                }
+    
+                                p {
+                                    color: $mainColor_2;
+                                }
+    
+                                .arrow_ic {
+                                    width: 18px;
+                                    height: 9px;
+                                    flex-shrink: 0;
+                                }
+                            }
+    
+                            p {
+                                width: 100%;
+                                color: $mainColor_3;
+                                font-size: 4vw;
+                                font-weight: bold;
+                                @include hiddenText;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        //遊戲投注彈窗
+        &.betWindow {
+
+            .top,
+            .bottom {
+                width: 100%;
+                height: auto;
+                border-bottom: solid 1px $jumpWindow_secondBorder;
+                padding: 12px 0;
+
+                .smallTitle {
+                    color: $mainColor_2;
+                    font-size: 4vw;
+                    font-weight: bold;
+                    margin-bottom: 12px;
+                    text-align: center;
+                }
+
+                .selectBox {
+                    width: 100%;
+                    height: auto;
+                    margin: 0 auto 16px;
+                    position: relative;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    select {
+                        width: 300px;
+                        height: 42px;
+                        @include mainSelect;
+                    }
+
+                    i {
+                        position: absolute;
+                        right: 22px;
+                        width: 16px;
+                        height: 9px;
+                        pointer-events: none;
+                    }
+
+                    .money {
+                        color: $mainColor_1;
+                        font-size: 4vw;
+                        font-weight: bold;
+                        position: absolute;
+                        right: 57px;
+                    }
+                }
+
+                .inputBox {
+                    width: 100%;
+                    height: auto;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    margin-bottom: 12px;
+
+                    input {
+                        width: 100%;
+                        height: 42px;
+                        @include mainInput;
+                        margin: 0 auto;
+                    }
+
+                    .BtnArea {
+                        width: 100%;
+                        height: auto;
+                        display: flex;
+                        margin: 3vw auto;
+
+                        button {
+                            @include lightBtn_1;
+                            border-radius: 5px;
+                            margin-right: 1vw;
+
+                            &:last-child {
+                                margin-right: 0;
+                            }
+                        }
+                    }
+                }
+
+                .amount {
+                    width: 100%;
+                    color: $mainColor_1;
+                    font-size: 5vw;
+                    font-weight: bold;
+                    text-align: center;
+                    margin-bottom: 16px;
+                }
+
+                button {
+                    width: 70%;
+                    height: 42px;
+                    @include mainBtn;
+                    display: block;
+                    margin: 0 auto;
+                }
+            }
+
+            .enterGame {
+                width: 100%;
+                height: auto;
+                text-align: center;
+                padding: 16px 0;
+
+                button {
+                    width: 70%;
+                    height: 42px;
+                    @include secondBtn;
+                    margin-bottom: 12px;
+                }
+
+                div {
+                    width: 100%;
+                    height: auto;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    input {
+                        width: 10px;
+                        height: 10px;
+                        @include checkBox;
+                        margin-right: 3vw;
+                    }
+
+                    p {
+                        color: $mainColor_3;
+                        font-size: 16px;
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+
+        //修改手機
+        &.phoneWindow {
+
+            .title {
+                
+                p {
+                    font-size: 4vw;
+                }
+            }
+
+            .smallTitle {
+                width: 100%;
+                height: auto;
+                color: $mainColor_2;
+                font-size: 4vw;
+                font-weight: bold;
+                text-align: center;
+                padding: 16px 0;
+            }
+
+            form {
+                width: 100%;
+                height: auto;
+                padding-bottom: 24px;
+
+                label {
+                    display: block;
+                    width: 100%;
+                    height: auto;
+                    position: relative;
+                    padding: 0 24px;
+                    margin-bottom: 20px;
+
+                    &:nth-of-type(2) {
+                        border-bottom: solid 2px $border_1;
+                        padding-bottom: 20px;
+                    }
+
+                    input {
+                        width: 100%;
+                        height: 9.87vw;
+                        @include mainInput;
+                    }
+
+                    .cellphoneCheck {
+                        width: 80%;
+                        height: 9.87vw;
+                        @include lightBtn_1;
+                        display: block;
+                        margin: 0 auto;
+                    }
+
+                    .remind {
+                        width: 100%;
+                        color: $remind;
+                        font-size: 3vw;
+                        font-weight: bold;
+                        margin-top: 3px;
+                        line-height: 4vw;
+                    }
+                }
+
+                .checkBtn {
+                    width: 60%;
+                    height: 11vw;
+                    @include mainBtn;
+                    display: block;
+                    margin: 0 auto;
+                }
+            }
+        }
+
+        //更變密碼
+        &.passwordWindow {
+
+            .content {
+                width: 100%;
+                height: auto;
+                padding: 24px;
+
+                .inputBox {
+                    width: auto;
+                    height: auto;
+                    position: relative;
+                    margin-bottom: 20px;
+
+                    input {
+                        width: 100%;
+                        height: 9.87vw;
+                        @include mainInput;
+                    }
+
+                    i {
+                        width: 6.13vw;
+                        height: 4.26vw;
+                        position: absolute;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        right: 16px;
+                    }
+                }
+
+                button {
+                    width: 100%;
+                    height: 9.87vw;
+                    @include mainBtn;
+                }
+            }
+        }
+        
+        //lang
+        &.langWindow {
+
+            ul {
+                width: 100%;
+                height: auto;
+                padding: 24px 24px 32px;
+                
+                li {
+                    width: 100%;
+                    height: 9.87vw;
+                    margin-bottom: 15px;
+                    @include lightBtn_1;
+                    font-size: 4vw;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    &:last-child {
+                        margin: 0;
+                    }
+                }
+            }
+        }
+
+        //下載APP
+        &.downloadBox {
+
+            .box {
+                width: 100%;
+                height: auto;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 32px 24px;
+
+                .img {
+                    width: 15vw;
+                    height: 15vw;
+                    margin: 0 10px;
+                }
+            }
+        }
+
+        //流水紀錄
+        &.waterWindow_1,
+        &.waterWindow_2,
+        &.betRecord,
+        &.pointWindow,
+        &.partnerBox {
+            padding: 0 16px 25px;
+            
+            .content {
+                width: 100%;
+                height: auto;
+                padding: 16px 16px 0;
+                max-height: 50vh;
+                overflow-y: auto;
+
+                .box {
+                    width: 100%;
+                    height: auto;
+                    border: solid 1px $border_1;
+                    border-radius: 5px;
+                    overflow: hidden;
+                    margin-bottom: 10px;
+
+                    .smallTitle {
+                        width: 100%;
+                        height: 9vw;
+                        background: $table_jumpWindow_TitleBG;
+                        border-bottom: solid 1px $table_Border;
+                        color: $mainColor_1;
+                        font-size: 4vw;
+                        font-weight: bold;
+                        display: flex;
+                        align-items: center;
+                        padding: 0 16px;
+                    }
+        
+                    ul {
+                        width: 100%;
+                        height: auto;
+                        background: $table_jumpWindow_BG;
+                        border-top: none;
+                        padding: 0 8px;
+        
+                        li {
+                            width: 100%;
+                            height: 9vw;
+                            border-bottom: solid 1px $table_Border;
+                            color: $mainColor_2;
+                            font-size: 3.7vw;
+                            font-weight: bold;
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+        
+                            &:last-child {
+                                border: none;
+                            }
+        
+                            p {
+                                color: $mainColor_3;
+        
+                                &.money {
+                                    color: $remind;
+                                }
+                            }
+                        }
+                    }
+                }
+                
+                table {
+                    width: 100%;
+                    height: auto;
+                    box-shadow: 0 0 0 1px $border_1;
+                    border-radius: 5px;
+                    overflow: hidden;
+
+                    tr {
+
+                        &:last-child {
+
+                            td {
+
+                                p {
+                                    border: none;
+                                }
+                            }
+                        }
+
+                        th {
+                            height: 9vw;
+                            vertical-align: middle;
+                            background: $table_jumpWindow_TitleBG;
+                            border-bottom: solid 1px $table_Border;
+
+                            p {
+                                width: 100%;
+                                color: $mainColor_1;
+                                font-size: 3.4vw;
+                                font-weight: bold;
+                                text-align: center;
+                                @include hiddenText;
+                            }
+                        }
+
+                        td {
+                            width: 34%;
+                            height: 9vw;
+                            vertical-align: middle;
+
+                            &:nth-of-type(1) {
+                                padding-left: 12px;
+
+                                p {
+                                    color: $mainColor_2;
+                                }
+                            }
+                            &:last-child {
+                                padding-right: 12px;
+                            }
+
+                            p {
+                                width: 100%;
+                                height: 100%;
+                                border-bottom: solid 1px $table_Border;
+                                color: $mainColor_3;
+                                font-size: 3.7vw;
+                                font-weight: bold;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                @include hiddenText;
+                            }
+                        }
+                    }
+                }
+
+                .pageBox {
+                    width: 100%;
+                    height: auto;
+                    display: flex;
+                    align-items: center;
+                    margin-top: 16px;
+
+                    .line {
+                        width: 100%;
+                        height: 1px;
+                        background: $disable;
+                    }
+
+                    i {
+                        width: 16px;
+                        height: 9px;
+                        margin: 0 5px;
+                        flex-shrink: 0;
+
+                        &.disable {
+                            filter: grayscale(1) brightness(3);
+                        }
+
+                        &:nth-of-type(1) {
+                            transform: rotate(90deg);
+                        }
+                        &:nth-of-type(2) {
+                            transform: rotate(-90deg);
+                        }
+                    }
+
+                    p {
+                        width: 5vw;
+                        height: 5vw;
+                        background: $border_1;
+                        border-radius: 50%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        flex-shrink: 0;
+                        padding-bottom: 2px;
+
+                        span {
+                            color: $mainColor_4;
+                            font-size: 3vw;
+                            font-weight: bold;
+                        }
+                    }
+                }
+
+                .pageText {
+                    width: 100%;
+                    color: $disable;
+                    font-size: 3vw;
+                    font-weight: bold;
+                    text-align: center;
+                    margin-top: 5px;
+                }
+            }
+        }
+
+        //eventWindow
+        &.eventWindow {
+            
+            .content {
+                max-height: 50vh;
+                overflow-y: auto;
+                
+                img {
+                    margin: 10px 0;
+                }
+
+                p {
+                    color: $mainColor_3;
+                    font-size: 3.7vw;
+                    font-weight: bold;
+                    line-height: 4.5vw;
+
+                    &.smallTitle {
+                        color: $mainColor_2;
+                        font-size: 4vw;
+                        margin-bottom: 10px;
+                        text-align: center;
+                    }
+                }
+            }
+
+            button {
+                width: 70%;
+                height: 11vw;
+                @include mainBtn;
+                display: block;
+                margin: 24px auto;
+            }
+        }
+
+        //loading
+        &.loading {
+
+            .content {
+                width: 100%;
+                height: 26vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+
+                .img {
+                    width: 30vw;
+                    height: 30vw;
+                    animation: round 2s linear 0s infinite;
+                }
+
+                p {
+                    color: $mainColor_3;
+                    font-size: 4vw;
+                    font-weight: bold;
+                    margin-top: 20px;
+                }
+
+                @keyframes round {
+                    0% {
+                        transform: rotate(0);
+                    }
+
+                    100% {
+                        transform: rotate(360deg);
+                    }
+                }
+            }
+        }
+
+        //agent
+        &.agentWindow {
+
+            form {
+                width: 100%;
+                height: auto;
+                max-height: 66vh;
+                overflow-y: auto;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 24px 16px;
+
+                label {
+                    width: 100%;
+                    height: auto;
+                    position: relative;
+                    margin-bottom: 3vw;
+                    display: flex;
+                    flex-direction: column;
+                    box-sizing: border-box;
+                    padding: 0 12px 0 20px;
+
+                    &:nth-last-of-type(1) {
+                        margin-bottom: 5vw;
+                    }
+
+                    div {
+                        width: 100%;
+                        height: auto;
+                        display: flex;
+                        align-items: center;
+
+                        &.checkWord {
+                            display: block;
+                        }
+
+                        em {
+                            position: absolute;
+                            left: 0;
+                            color: $mainColor_1;
+                            font-size: 14px;
+                            font-weight: bold;
+                        }
+    
+                        input {
+                            width: 100%;
+                            height: 9.87vw;
+                            @include mainInput;
+    
+                            &.line {
+                                padding-left: 12vw;
+                            }
+                        }
+
+                        .eye {
+                            position: absolute;
+                            right: 20px;
+                            width: 6.13vw;
+                            height: 4.26vw;
+                        }
+    
+                        .date_ic {
+                            position: absolute;
+                            right: 25px;
+                            width: 4vw;
+                            height: 4vw;
+                        }
+    
+                        .line_ic,
+                        .skype_ic {
+                            position: absolute;
+                            width: 8vw;
+                            height: 8vw;
+                            left: 23px;
+                        }
+                    }
+
+                    .remind {
+                        width: 100%;
+                        color: $remind;
+                        font-size: 3.4vw;
+                        font-weight: bold;
+                        line-height: 4vw;
+                        margin-top: 5px;
+                    }
+                }
+
+                .box {
+                    width: 100%;
+                    height: auto;
+                    position: relative;
+                    padding: 0 12px 0 20px;
+
+                    .smallTitle {
+                        color: $mainColor_2;
+                        font-size: 4vw;
+                        font-weight: bold;
+                    }
+
+                    em {
+                        position: absolute;
+                        left: 0;
+                        color: $mainColor_1;
+                        font-size: 14px;
+                        font-weight: bold;
+                    }
+
+                    ul {
+                        width: 100%;
+                        height: auto;
+                        margin-top: 10px;
+
+                        li{
+                            width: 100%;
+                            height: 9.87vw;
+                            background: $bg_2;
+                            box-shadow: 1px 1px 3px 1px $mainShadow_1;
+                            border: solid 1px transparent;
+                            border-radius: 5px;
+                            display: flex;
+                            align-items: center;
+                            margin-bottom: 10px;
+
+                            input {
+                                width: 10px;
+                                height: 10px;
+                                @include checkBox;
+                                margin: 0 20px;
+
+                                &::before {
+                                    width: 15px;
+                                    height: 15px;
+                                }
+                                &:after {
+                                    width: 12px;
+                                    height: 12px;
+                                }
+                            }
+
+                            p {
+                                color: $mainColor_3;
+                                font-size: 4vw;
+                                font-weight: bold;
+                            }
+
+                            &.active {
+                                border-color: $border_1;
+                                box-shadow: none;
+                                
+                                p {
+                                    color: $mainColor_1;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .isCheck {
+                    width: auto;
+                    height: auto;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin: 36px 0;
+
+                    input {
+                        width: 10px;
+                        height: 10px;
+                        @include checkBox;
+                        margin-right: 20px;
+                    }
+
+                    p {
+                        color: $click;
+                        font-size: 4vw;
+                        font-weight: bold;
+                        text-decoration: underline;
+                    }
+                }
+
+                .checkBtn {
+                    width: 70%;
+                    height: 9.87vw;
+                    @include secondBtn;
+                    flex-shrink: 0;
+                }
+            }
+        }
+
+        .title {
+            width: 100%;
+            height: 50px;
+            border-bottom: solid 3px $jumpWindow_secondBorder;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            &.sp {
+                height: auto;
+                flex-direction: column;
+                padding: 16px 0;
+
+                .smallTitle {
+                    color: $mainColor_3;
+                    font-size: 4vw;
+                    letter-spacing: 0;
+                    margin-top: 8px;
+                }
+            }
+
+            p {
+                color: $jumpWindow_Title;
+                font-size: 5vw;
+                font-weight: bold;
+                letter-spacing: 2px;
+            }
+    
+            i {
+                width: 9vw;
+                height: 9vw;
+                background: $jumpWindow_BG;
+                border-radius: 50%;
+                position: absolute;
+                top: -12vw;
+                right: -2.5vw;
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%,-50%);
+                    width: 4vw;
+                    height: 4vw;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../js/javascript.js"></script>
+    <link rel="shortcut icon" href="../images/NJLOGO_64x64.ico" type="image/x-icon">
+</head>
+<body>
+    <!--header-->
+    <header>
+        <!--content-->
+        <div class="content">
+            <div class="title">マイページ</div>
+        </div>
+    </header>
+    <!--main-->
+    <main>
+        <!--會員中心-->
+        <div class="memberWrap">
+            <!--玩家資訊-->
+            <div class="user">
+                <!--上列-->
+                <div class="info">
+                    <!--上-->
+                    <div class="box">
+                        <p class="account">
+                            <span class="lv">ゴールド会員</span>
+                            user898
+                        </p>
+                        <button class="infoBtn" onclick="window.location.href='./member_info.html'">個人情報</button>
+                    </div>
+                    <!--下-->
+                    <div class="box">
+                        <p class="amount">$9933</p>
+                        <button class="depositBtn" onclick="window.location.href='./deposit.html'">今すぐ入金</button>
+                    </div>
+                </div>
+                <!--大按鈕區-->
+                <div class="btnBox">
+                    <div class="left">
+                        <button class="wallet" onclick="window.location.href='./wallet.html'">マイウォレット</button>
+                        <button class="vip" onclick="window.location.href='./vip.html'">VIP</button>
+                    </div>
+                    <ul class="right">
+                        <li>
+                            <button class="bettingRecord" onclick="window.location.href='./bettingRecord.html'"></button>
+                            <p>ベット履歷</p>
+                        </li>
+                        <li>
+                            <button class="dealRecord" onclick="window.location.href='./dealRecord.html'"></button>
+                            <p>取引履歷</p>
+                        </li>
+                        <li>
+                            <button class="mail" onclick="window.location.href='./mail.html'"></button>
+                            <p>インボックス</p>
+                        </li>
+                        <li>
+                            <button class="card" onclick="window.location.href='./card.html'"></button>
+                            <p>口座設定</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!--選項條-->
+            <div class="optionBox">
+                <ul>
+                    <li onclick="window.location.href='./invite.html'">
+                        <i class="invite_ic"></i>
+                        メンバーを招待する
+                    </li>
+                    <li onclick="window.location.href='./searchPoint.html'">
+                        <i class="point_ic"></i>
+                        ∞4世代ボーナス報酬
+                    </li>
+                    <li onclick="window.location.href='./eventApply.html'">
+                        <i class="eventApply_ic"></i>
+                        プロモーション申請
+                    </li>
+                    <li onclick="window.location.href='./help_new.html'">
+                        <i class="new_ic"></i>
+                        ヘルプ​センター
+                    </li>
+                    <li onclick="window.location.href='./help_about.html'">
+                        <i class="about_ic"></i>
+                        当社について
+                    </li>
+                    <li class="linkBtn">
+                        <i class="follow_ic"></i>
+                        フォローする
+                    </li>
+                    <li class="langBtn">
+                        <i class="lang_ic"></i>
+                        日本語
+                    </li>
+                    <li onclick="window.location.href='./agent.html'">
+                        <i class="agent_ic"></i>
+                        アフィリエイト
+                    </li>
+                    <li onclick="window.location.href='../index.html'">
+                        <i class="logout_ic"></i>
+                        ログアウト
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </main>
+    <!--footer-->
+    <footer class="user">
+        <ul>
+            <li>
+                <a class="home" href="./index_inner.html"></a>
+            </li>
+            <li>
+                <a class="promotion" href="./event.html"></a>
+            </li>
+            <li>
+                <a class="wallet" href="./wallet.html"></a>
+            </li>
+            <li>
+                <a class="cs" href="./help_often_contact.html"></a>
+            </li>
+            <li class="active">
+                <a class="member" href="./member.html"></a>
+            </li>
+        </ul>
+    </footer>
+    <!--彈窗-->
+    <div class="filter">
+        <div class="jumpWindow langWindow">
+            <div class="title">
+                <p>語言</p>
+                <i class="close"></i>
+            </div>
+            <ul>
+                <li class="active close">日本語</li>
+                <li class="close">繁體中文</li>
+                <li class="close">简体中文</li>
+            </ul>
+        </div>
+        <div class="jumpWindow downloadBox">
+            <div class="title">
+                <p>フォローする</p>
+                <i class="close"></i>
+            </div>
+            <div class="box">
+                <div class="img twitter"></div>
+                <div class="img instergram"></div>
+                <div class="img baido"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

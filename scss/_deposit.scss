@@ -1,0 +1,198 @@
+//存款
+.depositWrap {
+    @include mainBG_1;
+
+    .lineTitle {
+        width: 100%;
+        height: auto;
+        display: flex;
+        align-items: center;
+        margin-bottom: 16px;
+
+        .star_ic {
+            width: 4vw;
+            height: 4vw;
+            flex-shrink: 0;
+            margin-right: 5px;
+        }
+
+        p {
+            color: $mainColor_1;
+            font-size: 4vw;
+            font-weight: bold;
+            flex-shrink: 0;
+            margin-right: 5px;
+        }
+
+        .line {
+            width: 100%;
+            height: 2px;
+            background: $border_1;
+        }
+    }
+
+    .depList {
+        width: 100%;
+        height: auto;
+        border-bottom: solid 2px $border_1;
+        padding: 0 16px 16px;
+
+        ul {
+            width: 100%;
+            height: auto;
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            grid-auto-rows: 25vw;
+            grid-gap: 16px;
+
+            li {
+                width: auto;
+                height: auto;
+                @include depositBtn;
+                position: relative;
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    right: -1px;
+                    bottom: -1px;
+                    width: 12vw;
+                    height: 11vw;
+                }
+
+                i {
+                    width: 12vw;
+                    height: 12vw;
+
+                    &.tigerpay_ic {
+                        width: 15vw;
+                        height: 15vw;
+                    }
+
+                    &.sticpay_ic,
+                    &.iwallet_ic,
+                    &.imove_ic {
+                        width: 18vw;
+                        height: 18vw;
+                    }
+                }
+            }
+        }
+    }
+
+    .depContent {
+        display: none;
+        width: 100%;
+        height: auto;
+        border-bottom: solid 2px $border_1;
+        padding: 16px;
+
+        &.display {
+            display: block;
+        }
+
+        .smallTitle {
+            color: $mainColor_2;
+            font-size: 4vw;
+            font-weight: bold;
+            margin: 10px 0 5px;
+
+            &:first-child {
+                margin-top: 0;
+            }
+        }
+
+        .selectBox {
+            width: 100%;
+            height: auto;
+            position: relative;
+
+            select {
+                width: 100%;
+                height: 9.87vw;
+                @include mainSelect;
+            }
+
+            .arrow_ic {
+                width: 18px;
+                height: 9px;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                right: 16px;
+            }
+        }
+
+        .inputBox {
+            width: 100%;
+            height: auto;
+
+            input {
+                width: 100%;
+                height: 9.87vw;
+                @include mainInput;
+            }
+        }
+
+        .remind {
+            color: $remind;
+            font-size: 3.4vw;
+            line-height: 4.5vw;
+            font-weight: bold;
+            margin-bottom: 16px;
+        }
+
+        button {
+            width: 80%;
+            height: 11vw;
+            @include secondBtn;
+            display: block;
+            margin: 0 auto;
+        }
+    }
+
+    .remindBox {
+        width: 100%;
+        height: auto;
+        background: $bg_2;
+        box-shadow: 1px 1px 2px 0 $mainShadow_2;
+        border-radius: 5px;
+        margin-top: 16px;
+        padding: 0 16px 16px;
+
+        .lineTitle {
+            padding: 10px 0;
+            margin: 0;
+            
+            p {
+                margin: 0;
+            }
+
+            .star_ic {
+                margin: 0 5px;
+            }
+        }
+
+        .text {
+            color: $mainColor_3;
+            font-size: 3.4vw;
+            font-weight: bold;
+            line-height: 4.5vw;
+        }
+
+        .remind {
+            color: $remind;
+            font-size: 3.4vw;
+            font-weight: bold;
+            line-height: 4.5vw;
+            margin-top: 10px;
+        }
+
+        .smallTitle {
+            color: $mainColor_2;
+            font-size: 3.4vw;
+            font-weight: bold;
+            margin: 10px 0 5px;
+        }
+    }
+}
