@@ -53,6 +53,7 @@
                 border-radius: 10px;
                 border: solid 1px $event_boxBorder;
                 margin-bottom: 10px;
+                overflow: hidden;
 
                 &:last-child {
                     margin: 0;
@@ -72,7 +73,7 @@
                     }
 
                     p {
-                        color: $mainColor_3;
+                        color: $mainColor_7;
                         font-size: 4vw;
                         font-weight: bold;
                     }
@@ -127,7 +128,7 @@
             }
     
             p {
-                color: $mainColor_1;
+                color: $mainColor_6;
                 font-size: 4vw;
                 font-weight: bold;
                 flex-shrink: 0;
@@ -137,7 +138,7 @@
             .line {
                 width: 100%;
                 height: 2px;
-                background: $border_1;
+                background: $mainColor_6;
             }
         }
 
@@ -147,7 +148,7 @@
             padding: 0 16px;
 
             p {
-                color: $mainColor_3;
+                color: $mainColor_4;
                 font-size: 4vw;
                 font-weight: bold;
                 line-height: 5.5vw;

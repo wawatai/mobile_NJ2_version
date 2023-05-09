@@ -1,12 +1,12 @@
-//bg
-.bg {
-    background: url('../images/bg.jpg') top center;
-    background-size: cover;
-}
+// //bg
+// .bg {
+//     background: url('../images/bg.jpg') top center;
+//     background-size: cover;
+// }
 
 //header
 header .back_arrow .arrow_ic {
-    background: url('../images/icon/arrow_2.png') no-repeat;
+    background: url('../images/icon/arrow_2_red.png') no-repeat;
     background-size: contain;
 }
 header .editBtn {
@@ -57,20 +57,40 @@ footer .home::before {
     background: url('../images/icon/svg/home.svg') no-repeat center;
     background-size: contain;
 }
+footer .home::after {
+    background: url('../images/icon/svg/home_active.svg') no-repeat center;
+    background-size: contain;
+}
 footer .promotion::before {
     background: url('../images/icon/svg/promotion.svg') no-repeat center;
+    background-size: contain;
+}
+footer .promotion::after {
+    background: url('../images/icon/svg/promotion_active.svg') no-repeat center;
     background-size: contain;
 }
 footer .wallet::before {
     background: url('../images/icon/svg/wallet.svg') no-repeat center;
     background-size: contain;
 }
+footer .wallet::after{
+    background: url('../images/icon/svg/wallet_active.svg') no-repeat center;
+    background-size: contain;
+}
 footer  .cs::before {
     background: url('../images/icon/svg/customer.svg') no-repeat center;
     background-size: contain;
 }
+footer  .cs::after {
+    background: url('../images/icon/svg/customer_active.svg') no-repeat center;
+    background-size: contain;
+}
 footer .member::before {
     background: url('../images/icon/svg/user.svg') no-repeat center;
+    background-size: contain;
+}
+footer .member::after {
+    background: url('../images/icon/svg/user_active.svg') no-repeat center;
     background-size: contain;
 }
 footer .agentHome::before {
@@ -323,7 +343,6 @@ footer .agentPrivacy::before {
     background: url('../images/levelMedal07.png') no-repeat;
     background-size: contain;
 }
-
 .vipWrap .detailBtn {
     background: url('../images/vip_detailBtn.png') no-repeat;
     background-size: contain;

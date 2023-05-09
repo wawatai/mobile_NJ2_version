@@ -2,24 +2,29 @@
 @mixin mainBG_1 {
     width: 100%;
     height: calc(100vh - 50px);
-    background: #f0f0f0;
+    background: #000000;
     overflow-y: auto;
     padding: 0 8px 20vw;
 }
-$bg_1: #f0f0f0;
+$bg_1: #000000;
 $bg_2: #ffffff;
 
 //fontColor
 $mainColor_1: #b8151a;
 $mainColor_2: #ba9141;
-$mainColor_3: #3a3a3a;
+$mainColor_3: #929292;
 $mainColor_4: #ffffff;
+$mainColor_5: #DD2830;
+$mainColor_6: #66E123;
+$mainColor_7: #ffcb70;
+$mainColor_8: #ff0000;
 
 //border
 $border_1: #b8151a;
+$border_2: #daaf6d;
 
 //remind
-$remind: #173fde;
+$remind: #438dd3;
 $disable: #7f7f7f;
 
 //可選字色
@@ -30,10 +35,10 @@ $mainShadow_1: #00000033;
 $mainShadow_2: #00000080;
 
 //header
-$header_BG: linear-gradient(to top,#bc9c64 4%,#f3d197 93%);
+$header_BG: #b8151b;
 $header_Title: #ffffff;
 @mixin lang {
-    background: #c8a870;
+    background: #b8151b;
     border: solid 1px #ffffff;
     border-radius: 30px;
     position: relative;
@@ -54,10 +59,10 @@ $header_Title: #ffffff;
 $header_langColor: #ffffff;
 $header_langBG: #c8a870;
 @mixin loginBtn {
-    background: linear-gradient(to top,#e7e7e7 0%,#ffffff 100%);
+    background: #DD2830;
     border-radius: 30px;
-    border: solid 1px #b74f4e;
-    color: #c9a567;
+    border: solid 1px transparent;
+    color: #ffffff;
     font-size: 3.4vw;
     font-weight: bold;
 
@@ -68,7 +73,7 @@ $header_langBG: #c8a870;
     }
 }
 @mixin signupBtn {
-    background: linear-gradient(to top,#970707 0%,#cf0505 98%);
+    background: #66E123;
     border-radius: 30px;
     color: #ffffff;
     font-size: 3.4vw;
@@ -81,7 +86,7 @@ $header_langBG: #c8a870;
 @mixin header_Back {
     background: #ffffff;
     border-radius: 30px;
-    color: #caa669;
+    color: #b8151a;
     font-size: 3.4vw;
     font-weight: bold;
     display: flex;
@@ -94,24 +99,25 @@ $header_langBG: #c8a870;
 $ad_Dot: #ffffff;
 
 //marquee
-$marquee_BG: #ffffff;
+$marquee_BG: #000000;
 $marquee_Border: #daaf6d;
-$marquee_TitleBG: linear-gradient(to top,#bc9c64 4%,#f3d197 93%);
+$marquee_TitleBG: linear-gradient(to bottom, #C9A76C 0%, #DD2830 100%);
 $marquee_Title: #ffffff;
-$marquee_Word: #c9a567;
+$marquee_Word: #ffcb70;
 
 //home
-$lv_BG: #cfab65;
+$lv_BG: #000000;
+$lv_Border: #ffcb72;
 $game_Color: #7c5b1a;
 
 //slotPage
 $slotPage_boxBG: #ffffff;
 $slotPage_boxBorder: #dfbe84;
-$slotPage_box_loveBG: #ba9141;
+$slotPage_box_loveBG: #b8151b;
 $slotPage_box_loveBG_active: #cf0505;
 
 //event
-$event_boxBG: #ffffff;
+$event_boxBG: #000000;
 $event_boxBorder: #dfbe84;
 @mixin eventBtn {
     background: linear-gradient(to bottom,#1fc0f5 0%,#2478df 100%);
@@ -171,7 +177,7 @@ $service_btnTitle: #00c114;
 $mail_readBG: #e3e3e3;
 
 //help
-$help_topList_BG: #ab1116;
+$help_topList_BG: #000000;
 $help_topList_Border: #ffffff;
 $help_topList_Color: #ffffff;
 $help_uploadBox_Border: #cccccc;
@@ -193,12 +199,13 @@ $help_uploadBox_Border: #cccccc;
 
 //其他BG
 @mixin innerBG_1 {
-    background: #ffffff;
+    background: #000000;
     border-radius: 16px;
-    border: solid 1px #daaf6d;
+    border: solid 1px #ffcb72;
 }
 @mixin innerBG_2 {
-    background: #ffffff;
+    background: #000000;
+    border: solid 1px #d5ab6a;
     border-radius: 5px 10px 10px 5px;
     box-shadow: 1px 2px 1px 0 #0000001d;
     position: relative;
@@ -211,28 +218,30 @@ $help_uploadBox_Border: #cccccc;
         left: 0;
         width: 5px;
         height: 100%;
-        background: #daaf6d;
+        background: #d5ab6a;
     }
 }
 
-$footer_BG: linear-gradient(to top,#bc9c64 4%,#f3d197 93%);
-$footerHov_BG: #b8151a;
+$footer_BG: #b8151b;
+$footerHov_BG: #ffffff;
 
 //table
-$table_BG: #ffffff;
+$table_BG: #000000;
 $table_TitleBG: linear-gradient(to top,#b78c4b 0%,#d5ab6a 100%);
 $table_TitleSecondBG: linear-gradient(to top,#a2a2a2 0%,#cccccc 77%);
 $table_Title: #ffffff;
-$table_Border: #b78d4b;
+$table_Border: #d5ab6a;
 $table_innerBorder: #a8a8a8;
-$table_jumpWindow_TitleBG: linear-gradient(to top,#eeeeee 0%,#ffffff 100%);
-$table_jumpWindow_BG: #f1f1f1;
+$table_jumpWindow_TitleBG: #b78d4b;
+$table_jumpWindow_BG: #000000;
 
 //page
 @mixin pageStyle_1 {
-    background: linear-gradient(to top,#b7b7b7 0%,#d2d2d2 100%);
+    background: #000000;
+    border: 1px solid #a8a8a8;
+    border-bottom:  transparent;
     border-radius: 16px 16px 0 0;
-    color: #ffffff;
+    color: #a8a8a8;
     font-size: 4vw;
     font-weight: bold;
     display: flex;
@@ -241,13 +250,15 @@ $table_jumpWindow_BG: #f1f1f1;
 
     &:active,&.active {
         background: linear-gradient(to bottom,#970707 0%,#cf0505 98%);
+        border-color: transparent;
+        color: #ffffff;
     }
 }
 @mixin pageStyle_2 {
-    background: linear-gradient(to top,#e7e7e7 0%,#ffffff 100%);
+    background: #000000;
     border-radius: 30px;
-    border: solid 1px #dfbe84;
-    color: #b1802d;
+    border: solid 1px #ffcb72;
+    color: #ffcb72;
     font-size: 4vw;
     font-weight: bold;
     display: flex;
@@ -263,7 +274,7 @@ $table_jumpWindow_BG: #f1f1f1;
 
 //箭頭小提示
 @mixin smallTip {
-    background: #ffb606;
+    background: #c70000;
     border-radius: 30px;
     padding: 5px 10px;
     color: #ffffff;
@@ -282,28 +293,27 @@ $table_jumpWindow_BG: #f1f1f1;
         height: 0;
         border-style: solid;
         border-width: 6px 4px 0 4px;
-        border-color: #ffb606 transparent;
+        border-color: #c70000 transparent;
     }
 }
-$currentBG: #f0f0f0;
+$currentBG: #000000;
 
 //彈窗背景透明底
 $filter: #00000066;
 
 //jumpWindow
-$jumpWindow_Title: #b8151a;
-$jumpWindow_BG: #f9f9f9;
+$jumpWindow_Title: #ffffff;
+$jumpWindow_BG: #000000;
 $jumpWindow_Border: #daaf6d;
 $jumpWindow_secondBorder: #b8151a;
 @mixin newsBox {
-    background: linear-gradient(to top,#eeeeee 0%,#ffffff 100%);
+    background: #000000;
     border-radius: 5px;
     border: solid 1px #ba9141;
     overflow: hidden;
 
     &.active {
-        background: #ffffff;
-        border-color: #b8151a;
+        background: #000000;
         box-shadow: 0 2px 5px 0 #0000001d inset;
     }
 }
@@ -320,7 +330,8 @@ $agent_BG_2: #b8151a;
 
 //常用
 @mixin mainBtn {
-    background: linear-gradient(to top,#bc9c64 4%,#f3d197 93%);
+    // background: linear-gradient(to top,#bc9c64 4%,#f3d197 93%);
+    background: #cdac75;
     border-radius: 30px;
     color: #ffffff;
     font-size: 4vw;
@@ -346,10 +357,10 @@ $agent_BG_2: #b8151a;
 }
 
 @mixin lightBtn_1 {
-    background: linear-gradient(to top,#e7e7e7 0%,#ffffff 100%);
+    background: #000000;
     border-radius: 30px;
-    border: solid 1px #b8151a;
-    color: #b8151a;
+    border: solid 1px #ff0000;
+    color: #ff0000;
     font-size: 3.4vw;
     font-weight: bold;
 
@@ -361,36 +372,39 @@ $agent_BG_2: #b8151a;
 $lightBtn_secondColor: #168516;
 
 @mixin dateBtn {
-    background: linear-gradient(to bottom,#ffffff 15%,#f2f2f2 100%);
+    background: #000000;
     border-radius: 30px;
-    border: solid 1px #daaf6d;
-    color: #b6832d;
+    border: solid 1px #ffcb72;
+    color: #ffcb72;
     font-size: 4vw;
     font-weight: bold;
 
     &:active,&.active {
-        background: linear-gradient(to bottom,#a87a33 0%,#ca9d58 100%);
+        background: #b8151a;
+        border-color: transparent;
         color: #ffffff;
     }
 }
 
 @mixin quickBtn {
-    background: linear-gradient(to top,#e7e7e7 0%,#ffffff 100%);
+    background: #000000;
     border-radius: 30px;
-    border: solid 1px #dfbe84;
-    color: #ba9141;
+    border: solid 2px #cf0505;
+    color: #cf0505;
     font-size: 3.4vw;
     font-weight: bold;
     display: flex;
     align-items: center;
-    padding-left: 10vw;
+    padding-left: 8vw;
 
     &:active,&.active {
-        color: #980707;
+        background: #cf0505;
+        color: #ffffff;
     }
 }
-$quickBtn_iconBG: linear-gradient(to top,#bc9c64 4%,#f3d197 93%);
-$quickBtn_iconBG_active: linear-gradient(to bottom,#970707 0%,#cf0505 98%);
+$quickBtn_iconBG: transparent;
+$quickBtn_iconBG_active: #000000;
+$quickBtn_iconBG_active02: #DD2830;
 
 button:disabled {
     background: #cccccc !important;
@@ -404,6 +418,33 @@ button:disabled {
     }
 }
 
+@mixin redBtn {
+    background: #DD2830;
+    border-radius: 30px;
+    color: #ffffff;
+    font-size: 4vw;
+    font-weight: bold;
+    letter-spacing: 1px;
+
+    &:active,&.active {
+        background: linear-gradient(to bottom,#bc9c64 4%,#f3d197 93%);
+    }
+}
+
+
+@mixin newtransBtn {
+    background: #ffc800;
+    border-radius: 30px;
+    border: solid 1px transparent;
+    color: #000000;
+    font-size: 3.4vw;
+    font-weight: bold;
+
+    &:active,&.active {
+        background: #DD2830;
+        color: #ffffff;
+    }
+}
 
 
 //input
@@ -412,11 +453,11 @@ button:disabled {
 
 //常用input
 @mixin mainInput {
-    background: #ffffff;
+    background: #000000;
     border-radius: 5px;
     border: solid 1px #daaf6d;
     box-shadow: 0 2px 5px 0 #0000001d inset;
-    color: #3a3a3a;
+    color: #ffffff;
     font-size: 3.4vw;
     font-weight: bold;
     padding-left: 16px;
@@ -428,7 +469,7 @@ button:disabled {
 
 input:disabled {
     border: none !important;
-    background: #ffffff !important;
+    background: #272626 !important;
     box-shadow: none !important;
 }
 
@@ -439,10 +480,10 @@ input:disabled {
 
 
 @mixin mainSelect {
-    background: #ffffff;
+    background: #000000;
     border-radius: 5px;
     border: solid 1px #daaf6d;
-    color: #3a3a3a;
+    color: #ffffff;
     font-size: 4vw;
     font-weight: bold;
     padding-left: 16px;
@@ -476,7 +517,7 @@ input:disabled {
         transform: translate(-50%,-50%);
         width: 18px;
         height: 18px;
-        background: #f9f9f9;
+        background: #000000;
         border-radius: 50%;
         border: solid 1px #daaf6d;
         box-shadow: 0 2px 3px 0 #0000001d inset;
@@ -491,7 +532,7 @@ input:disabled {
         transform: translate(-50%,-50%);
         width: 13px;
         height: 13px;
-        background: linear-gradient(to top,#970707 0%,#cf0505 98%);
+        background: #daaf6d;
         border-radius: 50%;
     }
 

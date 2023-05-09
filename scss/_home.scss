@@ -74,10 +74,22 @@
         button {
             width: 12vw;
             height: 12vw;
-            @include lightBtn_1;
+            @include mainBtn;
             border-radius: 50%;
             font-size: 3.7vw;
             margin: 0 3px;
+
+            &:nth-of-type(1) {
+                background: $mainColor_1;
+            }
+            &:nth-of-type(1) {
+                background: $mainColor_1;
+            }
+            &:nth-of-type(3) {
+                background: $bg_1;
+                color: $disable;
+                border: 1px solid $disable;
+            }
         }
     }
 
@@ -94,6 +106,7 @@
             width: auto;
             height: 6vw;
             background: $lv_BG;
+            border: 1px solid $lv_Border;
             border-radius: 30px;
             display: flex;
             align-items: center;
@@ -101,14 +114,14 @@
             padding: 0 10px;
 
             p {
-                color: $mainColor_4;
+                color: $mainColor_7;
                 font-size: 3vw;
                 font-weight: bold;
             }
         }
 
         .userName {
-            color: $mainColor_1;
+            color: $mainColor_5;
             font-size: 4vw;
             font-weight: bold;
             margin-top: 5px;
@@ -121,7 +134,7 @@
         }
 
         .amount {
-            color: $mainColor_1;
+            color: $mainColor_5;
             font-size: 5vw;
             font-weight: bold;
             margin-top: 8px;
@@ -164,11 +177,11 @@
             }
 
             i {
-                width: 8vw;
-                height: 8vw;
+                width: 6.8vw;
+                height: 6.8vw;
                 position: absolute;
-                top: -1px;
-                left: -1px;
+                top: 0px;
+                left: 0px;
                 background: $quickBtn_iconBG;
                 border-radius: 50%;
 
@@ -183,11 +196,16 @@
                 }
 
                 &.soccer_ic,
-                &.slot_ic,
                 &.fish_ic {
                     
                     &::before {
                         width: 5vw;
+                        height: 5vw;
+                    }
+                }
+                &.slot_ic {
+                    &::before {
+                        width: 5.2vw;
                         height: 5vw;
                     }
                 }
