@@ -135,7 +135,7 @@
             .title {
                 width: 100%;
                 height: 9vw;
-                background: $table_TitleBG;
+                background: $mainColor_1;
                 border-radius: 16px 16px 0 0;
                 color: $table_Title;
                 font-size: 4vw;
@@ -149,8 +149,8 @@
             ul {
                 width: 100%;
                 height: auto;
-                background: $table_BG;
-                border: solid 1px $table_Border;
+                background: $bg_1;
+                border: solid 1px $border_1;
                 border-top: none;
                 padding: 0 8px;
 
@@ -158,7 +158,7 @@
                     width: 100%;
                     height: 9vw;
                     border-bottom: solid 1px $table_innerBorder;
-                    color: $mainColor_3;
+                    color: $mainColor_4;
                     font-size: 3.7vw;
                     font-weight: bold;
                     display: flex;
@@ -171,7 +171,7 @@
                     }
 
                     p {
-                        color: $mainColor_1;
+                        color: $mainColor_8;
 
                         &.result {
                             color: $remind;
@@ -240,7 +240,7 @@
             ul {
                 width: 100%;
                 height: auto;
-                background: $table_BG;
+                background: $bg_1;
                 border: solid 1px $table_Border;
                 border-top: none;
                 padding: 0 8px;
@@ -249,7 +249,7 @@
                     width: 100%;
                     height: 9vw;
                     border-bottom: solid 1px $table_innerBorder;
-                    color: $mainColor_3;
+                    color: $mainColor_4;
                     font-size: 3.7vw;
                     font-weight: bold;
                     display: flex;
@@ -262,7 +262,7 @@
                     }
 
                     p {
-                        color: $mainColor_1;
+                        color: $mainColor_8;
                     }
                 }
             }
@@ -272,7 +272,8 @@
             display: none;
             width: 100%;
             height: auto;
-            background: $bg_2;
+            background: $bg_1;
+            border: 1px solid $table_Border;
             border-radius: 16px;
             box-shadow: 0 1px 2px 1px $mainShadow_1;
             padding: 0 8px;
@@ -300,6 +301,7 @@
 
                     &:first-child {
                         @include mainBtn;
+                        background: $mainColor_1;
                     }
 
                     &:last-child {
@@ -326,7 +328,7 @@
                     width: 100%;
                     height: 9vw;
                     border-bottom: solid 1px $table_innerBorder;
-                    color: $mainColor_3;
+                    color: $mainColor_4;
                     font-size: 3.7vw;
                     font-weight: bold;
                     display: flex;
@@ -437,7 +439,7 @@
                 width: 100%;
                 height: auto;
                 border-bottom: solid 1px $table_innerBorder;
-                color: $mainColor_3;
+                color: $mainColor_4;
                 font-size: 3.7vw;
                 font-weight: bold;
                 display: flex;
@@ -450,7 +452,7 @@
                 }
 
                 p {
-                    color: $mainColor_1;
+                    color: $mainColor_8;
                     text-align: right;
                 }
 

@@ -38,7 +38,7 @@
                 padding: 24px;
 
                 p {
-                    color: $mainColor_3;
+                    color: $mainColor_4;
                     font-size: 4vw;
                     font-weight: bold;
                     letter-spacing: 1px;
@@ -459,7 +459,7 @@
                         li {
                             width: 100%;
                             height: 46px;
-                            border-bottom: solid 1px $jumpWindow_secondBorder;
+                            border-bottom: solid 1px $border_2;
                             display: flex;
                             align-items: center;
                             position: relative;
@@ -470,7 +470,7 @@
                             }
     
                             &.smallTitle {
-                                border-color: $jumpWindow_secondBorder;
+                                border-color: $border_2;
                                 justify-content: space-between;
                                 cursor: pointer;
     
@@ -494,7 +494,7 @@
     
                             p {
                                 width: 100%;
-                                color: $mainColor_3;
+                                color: $mainColor_4;
                                 font-size: 4vw;
                                 font-weight: bold;
                                 @include hiddenText;
@@ -516,7 +516,7 @@
                 padding: 12px 0;
 
                 .smallTitle {
-                    color: $mainColor_2;
+                    color: $mainColor_4;
                     font-size: 4vw;
                     font-weight: bold;
                     margin-bottom: 12px;
@@ -533,7 +533,7 @@
                     justify-content: center;
 
                     select {
-                        width: 300px;
+                        width: 100%;
                         height: 42px;
                         @include mainSelect;
                     }
@@ -577,7 +577,7 @@
                         margin: 3vw auto;
 
                         button {
-                            @include lightBtn_1;
+                            @include newtransBtn;
                             border-radius: 5px;
                             margin-right: 1vw;
 
@@ -590,7 +590,7 @@
 
                 .amount {
                     width: 100%;
-                    color: $mainColor_1;
+                    color: $mainColor_4;
                     font-size: 5vw;
                     font-weight: bold;
                     text-align: center;
@@ -600,9 +600,15 @@
                 button {
                     width: 70%;
                     height: 42px;
-                    @include mainBtn;
+                    @include redBtn;
                     display: block;
                     margin: 0 auto;
+                }
+            }
+
+            .bottom {
+                .smallTitle {
+                    color: $mainColor_5;
                 }
             }
 
@@ -615,7 +621,7 @@
                 button {
                     width: 70%;
                     height: 42px;
-                    @include secondBtn;
+                    @include redBtn;
                     margin-bottom: 12px;
                 }
 
@@ -634,7 +640,7 @@
                     }
 
                     p {
-                        color: $mainColor_3;
+                        color: $mainColor_4;
                         font-size: 16px;
                         font-weight: bold;
                     }
@@ -814,7 +820,7 @@
                 .box {
                     width: 100%;
                     height: auto;
-                    border: solid 1px $border_1;
+                    border: solid 1px $border_2;
                     border-radius: 5px;
                     overflow: hidden;
                     margin-bottom: 10px;
@@ -824,7 +830,7 @@
                         height: 9vw;
                         background: $table_jumpWindow_TitleBG;
                         border-bottom: solid 1px $table_Border;
-                        color: $mainColor_1;
+                        color: $mainColor_4;
                         font-size: 4vw;
                         font-weight: bold;
                         display: flex;
@@ -855,7 +861,7 @@
                             }
         
                             p {
-                                color: $mainColor_3;
+                                color: $mainColor_4;
         
                                 &.money {
                                     color: $remind;
@@ -868,7 +874,8 @@
                 table {
                     width: 100%;
                     height: auto;
-                    box-shadow: 0 0 0 1px $border_1;
+                    border-bottom: solid 1px $table_Border;
+                    box-shadow: 0 0 0 1px $table_jumpWindow_TitleBG;
                     border-radius: 5px;
                     overflow: hidden;
 
@@ -892,7 +899,7 @@
 
                             p {
                                 width: 100%;
-                                color: $mainColor_1;
+                                color: $mainColor_4;
                                 font-size: 3.4vw;
                                 font-weight: bold;
                                 text-align: center;

@@ -40,7 +40,7 @@ footer {
       }
 
       &.active {
-
+        
         a {
           width: 15vw;
           height: 15vw;
@@ -49,6 +49,16 @@ footer {
           top: -35%;
           left: 50%;
           transform: translateX(-50%);
+
+          &::after {
+            content: " ";
+            width: 6.5vw;
+            height: 6.5vw;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+          }
         }
       }
     }

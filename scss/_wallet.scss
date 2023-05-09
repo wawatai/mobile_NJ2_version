@@ -32,7 +32,7 @@
                     margin-bottom: 2vw;
 
                     p {
-                        color: $mainColor_2;
+                        color: $mainColor_7;
                         font-size: 4vw;
                         font-weight: bold;
 
@@ -62,7 +62,7 @@
                     border-bottom: solid 1px $border_1;
 
                     p {
-                        color: $mainColor_1;
+                        color: $mainColor_8;
                         font-size: 6vw;
                         font-weight: bold;
                     }
@@ -81,7 +81,7 @@
             li {
                 width: 20vw;
                 height: 20vw;
-                @include lightBtn_1;
+                @include mainBtn;
                 border-radius: 50%;
                 display: flex;
                 flex-direction: column;
@@ -89,23 +89,35 @@
                 justify-content: center;
                 flex-shrink: 0;
 
-                &:active,&.active {
+                // &:active,&.active {
 
-                    p {
-                        color: $mainColor_4;
-                    }
-                }
+                //     p {
+                //         color: $mainColor_4;
+                //     }
+                // }
 
-                i {
-                    width: 9vw;
-                    height: 9vw;
-                }
+                // i {
+                //     width: 9vw;
+                //     height: 9vw;
+                // }
 
                 p {
-                    color: $mainColor_2;
-                    font-size: 3.4vw;
+                    color: $mainColor_4;
+                    font-size: 5.7vw;
                     font-weight: bold;
-                    margin-top: 1vw;
+                    // margin-top: 1vw;
+                }
+
+                &:nth-of-type(1) {
+                    background: $mainColor_1;
+                }
+                &:nth-of-type(3) {
+                    background: $bg_1;
+                    border: 1px solid $disable;
+
+                    p {
+                        color: $disable;
+                    }
                 }
             }
         }
@@ -126,7 +138,7 @@
         }
 
         p {
-            color: $mainColor_1;
+            color: $mainColor_8;
             font-size: 4vw;
             font-weight: bold;
             flex-shrink: 0;
@@ -136,7 +148,7 @@
         .line {
             width: 100%;
             height: 2px;
-            background: $border_1;
+            background: $mainColor_8;
         }
     }
 
@@ -205,13 +217,14 @@
                     width: auto;
                     height: auto;
                     border-radius: 10px;
-                    background: $bg_2;
+                    background: $bg_1;
+                    border: 1px solid $mainColor_7;
                     box-shadow: 1px 1px 2px 0 $mainShadow_1;
                     padding: 10px 16px;
 
                     div {
                         width: 100%;
-                        color: $mainColor_2;
+                        color: $mainColor_7;
                         font-size: 3.4vw;
                         font-weight: bold;
                         letter-spacing: 1px;
@@ -219,7 +232,7 @@
                     }
 
                     p {
-                        color: $mainColor_1;
+                        color: $mainColor_8;
                         font-size: 5vw;
                         font-weight: bold;
                         margin-top: 10px;
