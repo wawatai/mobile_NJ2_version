@@ -121,13 +121,6 @@ header {
             }
         }
 
-        .agentRegisterBtn {
-            width: auto;
-            height: 7vw;
-            @include secondBtn;
-            padding: 0 10px;
-        }
-
         &.helpPage {
             display: none;
 

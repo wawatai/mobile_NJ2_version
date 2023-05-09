@@ -53,34 +53,6 @@
                     @include mainBtn;
                     margin-top: 24px;
                 }
-
-                .img {
-                    width: 52vw;
-                    height: 32vw;
-                    margin: 0 auto;
-                }
-
-                .btnBox {
-                    width: 100%;
-                    height: auto;
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-
-                    button {
-                        width: 80%;
-
-                        &:first-child {
-                            margin: 0;
-                        }
-
-                        &:last-child {
-                            @include secondBtn;
-                            font-size: 4vw;
-                            margin-top: 12px;
-                        }
-                    }
-                }
             }
         }
 
@@ -335,12 +307,10 @@
 
         //最新消息
         &.news,
-        &.rules,
-        &.agentRules {
+        &.rules {
             padding-bottom: 16px;
 
-            &.rules,
-            &.agentRules {
+            &.rules {
 
                 .title {
 
@@ -386,20 +356,12 @@
 
                                 p {
                                     font-size: 14px;
-                                    white-space: unset;
+                                    white-space: pre-wrap;
                                     line-height: 20px;
                                     margin-bottom: 10px;
 
-                                    &.sp {
-                                        padding-left: 10px;
-                                    }
-
                                     &:last-child {
                                         margin: 0;
-                                    }
-
-                                    span {
-                                        color: $mainColor_1;
                                     }
                                 }
                             }
@@ -559,32 +521,13 @@
                     width: 100%;
                     height: auto;
                     display: flex;
-                    flex-direction: column;
                     justify-content: center;
                     margin-bottom: 12px;
 
                     input {
-                        width: 100%;
+                        width: 300px;
                         height: 42px;
                         @include mainInput;
-                        margin: 0 auto;
-                    }
-
-                    .BtnArea {
-                        width: 100%;
-                        height: auto;
-                        display: flex;
-                        margin: 3vw auto;
-
-                        button {
-                            @include lightBtn_1;
-                            border-radius: 5px;
-                            margin-right: 1vw;
-
-                            &:last-child {
-                                margin-right: 0;
-                            }
-                        }
                     }
                 }
 
@@ -1060,196 +1003,6 @@
                     100% {
                         transform: rotate(360deg);
                     }
-                }
-            }
-        }
-
-        //agent
-        &.agentWindow {
-
-            form {
-                width: 100%;
-                height: auto;
-                max-height: 66vh;
-                overflow-y: auto;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                padding: 24px 16px;
-
-                label {
-                    width: 100%;
-                    height: auto;
-                    position: relative;
-                    margin-bottom: 3vw;
-                    display: flex;
-                    flex-direction: column;
-                    box-sizing: border-box;
-                    padding: 0 12px 0 20px;
-
-                    &:nth-last-of-type(1) {
-                        margin-bottom: 5vw;
-                    }
-
-                    div {
-                        width: 100%;
-                        height: auto;
-                        display: flex;
-                        align-items: center;
-
-                        &.checkWord {
-                            display: block;
-                        }
-
-                        em {
-                            position: absolute;
-                            left: 0;
-                            color: $mainColor_1;
-                            font-size: 14px;
-                            font-weight: bold;
-                        }
-    
-                        input {
-                            width: 100%;
-                            height: 9.87vw;
-                            @include mainInput;
-    
-                            &.line {
-                                padding-left: 12vw;
-                            }
-                        }
-
-                        .eye {
-                            position: absolute;
-                            right: 20px;
-                            width: 6.13vw;
-                            height: 4.26vw;
-                        }
-    
-                        .date_ic {
-                            position: absolute;
-                            right: 25px;
-                            width: 4vw;
-                            height: 4vw;
-                        }
-    
-                        .line_ic,
-                        .skype_ic {
-                            position: absolute;
-                            width: 8vw;
-                            height: 8vw;
-                            left: 23px;
-                        }
-                    }
-
-                    .remind {
-                        width: 100%;
-                        color: $remind;
-                        font-size: 3.4vw;
-                        font-weight: bold;
-                        line-height: 4vw;
-                        margin-top: 5px;
-                    }
-                }
-
-                .box {
-                    width: 100%;
-                    height: auto;
-                    position: relative;
-                    padding: 0 12px 0 20px;
-
-                    .smallTitle {
-                        color: $mainColor_2;
-                        font-size: 4vw;
-                        font-weight: bold;
-                    }
-
-                    em {
-                        position: absolute;
-                        left: 0;
-                        color: $mainColor_1;
-                        font-size: 14px;
-                        font-weight: bold;
-                    }
-
-                    ul {
-                        width: 100%;
-                        height: auto;
-                        margin-top: 10px;
-
-                        li{
-                            width: 100%;
-                            height: 9.87vw;
-                            background: $bg_2;
-                            box-shadow: 1px 1px 3px 1px $mainShadow_1;
-                            border: solid 1px transparent;
-                            border-radius: 5px;
-                            display: flex;
-                            align-items: center;
-                            margin-bottom: 10px;
-
-                            input {
-                                width: 10px;
-                                height: 10px;
-                                @include checkBox;
-                                margin: 0 20px;
-
-                                &::before {
-                                    width: 15px;
-                                    height: 15px;
-                                }
-                                &:after {
-                                    width: 12px;
-                                    height: 12px;
-                                }
-                            }
-
-                            p {
-                                color: $mainColor_3;
-                                font-size: 4vw;
-                                font-weight: bold;
-                            }
-
-                            &.active {
-                                border-color: $border_1;
-                                box-shadow: none;
-                                
-                                p {
-                                    color: $mainColor_1;
-                                }
-                            }
-                        }
-                    }
-                }
-
-                .isCheck {
-                    width: auto;
-                    height: auto;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    margin: 36px 0;
-
-                    input {
-                        width: 10px;
-                        height: 10px;
-                        @include checkBox;
-                        margin-right: 20px;
-                    }
-
-                    p {
-                        color: $click;
-                        font-size: 4vw;
-                        font-weight: bold;
-                        text-decoration: underline;
-                    }
-                }
-
-                .checkBtn {
-                    width: 70%;
-                    height: 9.87vw;
-                    @include secondBtn;
-                    flex-shrink: 0;
                 }
             }
         }

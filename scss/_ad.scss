@@ -91,128 +91,86 @@
 .multiple-items.card {
     width: 100%;
     height: 180px;
-    margin: 0 auto !important;
+    display: flex;
+    align-items: center;
+    overflow-x: auto;
 
-    .slick-list {
-        height: 100%;
+    li {
 
-        .slick-track {
+        &.slick-center {
 
-            li {
+            .cardBG {
 
-                &.slick-center {
+                .nameBox {
 
-                    .cardBG {
-
-                        .nameBox {
-
-                            p {
-                                text-shadow: 2px 4px 3px $mainShadow_2;
-                            }
-                        }
-
-                        .num {
-                            text-shadow: 2px 4px 3px $mainShadow_2;
-                        }
+                    p {
+                        text-shadow: 2px 4px 3px $mainShadow_2;
                     }
                 }
-    
-                .cardBG {
-                    width: 275px;
-                    height: 160px;
-                    margin: 0 auto;
-                    transition: 0.3s all;
-                    position: relative;
 
-                    &.auditing {
-                        
-                        .audit {
-                            display: block;
-                        }
-                    }
-
-                    .audit {
-                        display: none;
-                        width: 89px;
-                        height: 23px;
-                        position: absolute;
-                        top: 15px;
-                        left: 0;
-                    }
-
-                    .nameBox {
-                        width: auto;
-                        height: auto;
-                        position: absolute;
-                        top: 14px;
-                        right: 16px;
-                        text-align: right;
-
-                        p {
-                            color: $mainColor_4;
-                            font-size: 18px;
-                            font-weight: bold;
-
-                            &:first-child {
-                                font-size: 22px;
-                                margin-bottom: 10px;
-                            }
-                        }
-                    }
-
-                    .num {
-                        width: 100%;
-                        color: $mainColor_4;
-                        font-size: 21px;
-                        font-weight: bold;
-                        text-align: center;
-                        letter-spacing: 2px;
-                        position: absolute;
-                        left: 0;
-                        bottom: 20px;
-                    }
+                .num {
+                    text-shadow: 2px 4px 3px $mainShadow_2;
                 }
             }
         }
-    }
 
-    .slick-arrow {
-        z-index: 1;
-        width: 40px;
-        height: 40px;
-        background: $card_ArrowBG;
-        border-radius: 50%;
-        top: 45%;
+        .cardBG {
+            width: 275px;
+            height: 160px;
+            margin-right: 20px;
+            transition: 0.3s all;
+            position: relative;
 
-        &:hover,&:active,&.active {
-            opacity: 1;
-        }
-
-        &::before {
-            display: block;
-            color: transparent;
-            width: 18px;
-            height: 9px;
-            position: absolute;
-            left: 46%;
-            transform: translate(-50%,-50%);
-            filter: grayscale(1) brightness(15);
-        }
-
-        &.slick-prev {
-            left: 0;
-
-            &::before {
-                transform: translate(-50%,-50%) rotate(90deg);
+            &:last-child {
+                margin: 0;
             }
-        }
 
-        &.slick-next {
-            right: 0;
+            &.auditing {
+                
+                .audit {
+                    display: block;
+                }
+            }
 
-            &::before {
-                left: 50%;
-                transform: translate(-50%,-50%) rotate(-90deg);
+            .audit {
+                display: none;
+                width: 89px;
+                height: 23px;
+                position: absolute;
+                top: 15px;
+                left: 0;
+            }
+
+            .nameBox {
+                width: auto;
+                height: auto;
+                position: absolute;
+                top: 14px;
+                right: 16px;
+                text-align: right;
+
+                p {
+                    color: $mainColor_4;
+                    font-size: 18px;
+                    font-weight: bold;
+
+                    &:first-child {
+                        font-size: 22px;
+                        margin-bottom: 10px;
+                    }
+                }
+            }
+
+            .num {
+                width: 100%;
+                color: $mainColor_4;
+                font-size: 21px;
+                font-weight: bold;
+                text-align: center;
+                letter-spacing: 2px;
+                position: absolute;
+                left: 0;
+                bottom: 20px;
             }
         }
     }
